@@ -128,7 +128,6 @@
                       </div>
                     </div><!--############################ fim panel 1 ##############################-->
                     <div class="tab-pane" id="tab2">
-
                       <legend>Delegado</legend>
                       <div class="form-group"  >
                         <div class="col-sm-12">
@@ -248,7 +247,7 @@
                     <div class="tab-pane" id="tab4">
                       <div class="form-group">
                         <div class="col-sm-12">
-                          <label for="comment">Observaçoes Gerais</label>
+                          <legend>Observaçoes Gerais</legend>                          
                           <textarea class="form-control" rows="5" id="comment"></textarea>
                         </div>
                       </div> 
@@ -261,7 +260,6 @@
         </div>
       </fieldset>
     </form>
-
     <table class="table">
       <thead>
         <tr>
@@ -271,13 +269,13 @@
       </thead>
       <tbody>            
         <?php foreach ($lista as $campo): ?>
-        <tr>
-          <td><?php echo $campo['delegaciaNome'] ?></td>
-          <td class="text-center">                
-            <a title="Editar" href="<?php echo '/sindicato/delegacia/edita/'.$campo['delegaciaId']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
-            <a title="Apagar" href="<?php echo '/sindicato/delegacia/delete/'.$campo['delegaciaId']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
-          </td>            
-        </tr>
+          <tr>
+            <td><?php echo $campo['delegaciaNome'] ?></td>
+            <td class="text-center">                
+              <a title="Editar" href="<?php echo '/sindicato/delegacia/edita/'.$campo['delegaciaId']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
+              <a title="Apagar" href="<?php echo '/sindicato/delegacia/delete/'.$campo['delegaciaId']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
+            </td>            
+          </tr>
         <?php endforeach; ?>
       </tbody>
     </table>
