@@ -14,7 +14,7 @@
 	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
 	<script src="./js/cpf.js"></script>
-	<script src="../js/vai.js"></script>
+	<script src="./js/porcima.js"></script>
 
 	<!--<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=cadastroii">-->
 </head>
