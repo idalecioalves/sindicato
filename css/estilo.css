@@ -1,0 +1,96 @@
+body{
+	font: 300 16px;
+}
+#login{
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	top:250px;
+	border: 3px solid #f1f1f1;
+	padding: 10px;
+	background-color: 
+}
+#imglogin{
+	margin-left: 90px;
+}
+.cad{
+	display: block;
+	border: none;
+	width:250px;
+	height: 40px;
+	margin-top: 10px;
+	float: left;
+}
+
+#login label{
+	display: block;
+	padding-top: 5px;
+}
+
+#cadastrar{
+	width: 300px;
+	height: 350px;
+	margin: 0 auto;
+	position: relative;
+	top:10px;
+	border: 3px solid #f1f1f1;
+	padding: 10px;
+	
+}
+
+.txt{
+	border:none;
+	width: 250px;
+	height: 40px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+}
+.txt:focus{
+	border:thin solid #f1f1f1;
+	box-shadow: 0 2px 16px #09f;
+}
+.sb{
+	display: block;
+	border: none;
+	width: 45%;
+	height: 40px;
+	margin-top: 10px;
+	float: left;
+
+	
+}
+.sb:hover{
+	background: #09f;
+	box-shadow: 0 2px 16px #09f;
+}
+
+.bradius{
+	border-radius: 6px;
+}
+.fleft{
+	float: left;
+}
+.fright{
+	float: right;
+}
+.txt,.txt:focus,.sb,.sb,.cadastrar,.cadastrar,.cad,.cad:hover {
+	transition: all 0.5s linear;
+}
+
+.cadastrar{
+	margin-left: 55%;
+	margin-top: 10px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f1f1f1;
+     }
+.cadastrar:hover{
+    	background: #09f;
+		box-shadow: 0 2px 16px #09f;
+    }
+.cad:hover{
+		background: #09f;
+		box-shadow: 0 2px 16px #09f;
+}
+
+

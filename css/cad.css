@@ -1,0 +1,306 @@
+.txtregistro{
+	margin-top: -30px;
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+	border: solid;
+	position: relative;
+}
+.txtdelegacia{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+}
+.txtdelegabel{
+	padding-top: 5px;
+	float: left;
+	position: relative;
+}
+.cad{
+	display: block;
+	border: none;
+	width:850px;
+	height: 40px;
+	margin-top: 10px;
+}
+.txtnome{
+	border:none;
+	width: 250px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+}
+.txtapelido{
+	border:none;
+	width: 250px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+}
+.txtcalend{
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	text-align: center;	
+}
+.txtentracalend{
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	text-align: center;	
+}
+.txtsaidacalend{
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	text-align: center;	
+}
+.txtmuni{
+	border:none;
+	width: 160px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	text-align: center;	
+}
+.txtpai{
+	border:none;
+	width: 250px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+}
+.txtresid{
+	border:none;
+	width: 180px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+}
+.txtestado{
+	border:none;
+	width: 80px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	text-align: center;	
+}
+.txtconjuge{
+	border:none;
+	width: 250px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+}
+.txtfilho{
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	float: right;
+}
+.txtcpf{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;	
+}
+.txtcasado{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtpele{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtolhos{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtcabelos{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtaltura{
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtcarteira{
+	border:none;
+	width: 180px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtserie{
+	border:none;
+	width: 100px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtvia{
+	border:none;
+	width: 100px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtresevista{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtresevista{
+	border:none;
+	width: 180px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;	
+}
+.txtviarese{
+	border:none;
+	width: 100px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtserierese{
+	border:none;
+	width: 100px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtidentidade{
+	border:none;
+	width: 160px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtexpeditor{
+	border:none;
+	width: 100px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txttitulo{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtzona{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.txtsecao{
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.cadastrar{
+	margin-left: 55%;
+	margin-top: 10px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f0f0f0;
+	text-decoration: none;
+     }
+.cadastrar,.cadastrar,.cad,.cad:hover {
+	transition: all 0.5s linear;
+}
+.cadastrar:hover{
+    	background: #09f;
+		box-shadow: 0 2px 16px #09f;
+    }
+.cad:hover{
+		background: #09f;
+		box-shadow: 0 2px 16px #09f;
+}
+.bradius{
+	border-radius: 10px;
+}
+.txtprof{
+	margin-top: 5px;
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+}
+.txtoutroprof{
+	margin-top: 5px;
+	border:none;
+	width: 85px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+}
+.txtprof2{
+	margin-top: 5px;
+	border:none;
+	width: 60px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;	
+}
+.txtcalend2{
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	text-align: center;	
+}
+
