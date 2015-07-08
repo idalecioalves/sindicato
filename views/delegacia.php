@@ -129,7 +129,6 @@
                     </div><!--############################ fim panel 1 ##############################-->
                     <div class="tab-pane" id="tab2">
 
-
                       <legend>Delegado</legend>
                       <div class="form-group"  >
                         <div class="col-sm-12">
