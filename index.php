@@ -72,7 +72,7 @@ $app->group('/comunidade', function () use ($app) {
 		$app->flash('success', 'Registro inserido com suscesso.');
 		$data['lista']=$app->banco->comunidade->order('id desc');
 		$app->view->setData($data);
-		$app->redirect('/sindicato/comunidade/lista');
+		$app->redirect('/comunidade/lista');
 	});
 
 
@@ -87,7 +87,7 @@ $app->group('/comunidade', function () use ($app) {
 		else
 		{
 			$app->flash('info', 'Registro não existe.');
-			$app->redirect('/sindicato/comunidade/lista');
+			$app->redirect('/comunidade/lista');
 		}
 		$app->render("comunidade.php",$data);	
 	});
@@ -107,7 +107,7 @@ $app->group('/comunidade', function () use ($app) {
 
 		$data['lista']=$app->banco->comunidade->order('id desc');
 		$app->view->setData($data);
-		$app->redirect('/sindicato/comunidade/lista');
+		$app->redirect('/comunidade/lista');
 	});
 //deleta o resgistro por id
 	$app->get('/delete/:id', function ($id) use ($app) {    
@@ -118,16 +118,15 @@ $app->group('/comunidade', function () use ($app) {
 		}
 		$data['lista']=$app->banco->comunidade->order('id desc');
 		$app->view->setData($data);
-		$app->redirect('/sindicato/comunidade/lista');
+		$app->redirect('/comunidade/lista');
 	});
 
 });
 
-
 $app->group('/delegacia', function () use ($app) {
 //lista todas as delegacias
 	$app->get('/lista', function () use ($app) {    
-		$data['lista']=$app->banco->delegacia->order('id desc');
+		$data['lista']=$app->banco->delegacia->order('delegaciaId desc');
 		$app->render("delegacia.php",$data);		
 	});
 });

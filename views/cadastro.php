@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cadastro</title>
+	<title>Cadastro de Aracoiaba</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/cad.css" />
 	<link rel="stylesheet" href="css/cadado.css" />
@@ -58,6 +58,7 @@ $(document).ready(function(){
 });
 </script>
 <body>
+<<<<<<< HEAD
 	<style type="text/css">
 	.window{
 		display:none;
@@ -81,6 +82,55 @@ $(document).ready(function(){
 	}
 	.fechar{display:block; text-align:right;}
 	</style>
+=======
+		<style type="text/css">
+		.window{
+			display:none;
+			width:300px;
+			height:300px;
+			position:absolute;
+			left:0;
+			top:0;
+			background:#FFF;
+			z-index:9900;
+			padding:10px;
+			border-radius:10px;
+		}
+		#mascara{
+			position:absolute;
+  			left:0;
+  			top:0;
+  			z-index:9000;
+  			background-color:#000;
+  			display:none;
+		}
+		.fechar{display:block; text-align:right;}
+		</style>
+
+		<a href="../externo/form.php" rel="modal">Janela modal</a>
+		<a href="texto.php" rel="modal">Janela 2 modal</a>
+		<div class="window" id="janela1">			
+		</div>		
+		<div id="mascara"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4f615bed7b2c33081c8ed6123b139885f286353e
 
 	<a href="form.php" rel="modal">Janela modal</a>
 	<a href="texto.php" rel="modal">Janela 2 modal</a>
@@ -181,8 +231,7 @@ $(document).ready(function(){
 
 				<div id="residcadados">
 					<div class="control-group">
-						<label for="residencia" >Residência:</label>
-						
+						<label for="residencia" >Residência:</label>						
 						<a href="/sindicato/comunidade/lista#comunidade" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span></a>
 
