@@ -1,6 +1,9 @@
 {
-    "require": {
-        "slim/slim": "~2.6",
-        "vrana/notorm": "dev-master"
-    }
-}
+	"require": {
+		"slim/slim": "~2.6",
+		"vrana/notorm": "dev-master"
+		},
+		"autoload":{ 	
+			"files": ["helpers/helpers.php"]
+		}
+	}

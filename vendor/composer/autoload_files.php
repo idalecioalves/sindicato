@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     $vendorDir . '/vrana/notorm/NotORM.php',
+    $baseDir . '/helpers/helpers.php',
 );
