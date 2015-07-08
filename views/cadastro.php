@@ -45,13 +45,8 @@
 
 		<a href="../externo/form.php" rel="modal">Janela modal</a>
 		<a href="texto.php" rel="modal">Janela 2 modal</a>
-
-
-		<div class="window" id="janela1">
-			
-		</div>
-
-		<!-- mascara para cobrir o site -->	
+		<div class="window" id="janela1">			
+		</div>		
 		<div id="mascara"></div>
 
 
@@ -165,8 +160,7 @@
 
 				<div id="residcadados">
 					<div class="control-group">
-						<label for="residencia" >Residência:</label>
-						
+						<label for="residencia" >Residência:</label>						
 						<a href="/sindicato/comunidade/lista#comunidade" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span></a>
 
