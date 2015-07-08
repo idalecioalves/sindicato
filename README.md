@@ -1,0 +1,2 @@
+# sindicato
+full
