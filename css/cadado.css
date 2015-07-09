@@ -1,4 +1,6 @@
 #geral{
+	top: 50%;
+	margin-top: -220px;
 	left: 50%;
 	margin-left: -475px;
 	width: 950px;
@@ -293,24 +295,26 @@ header#cabecalho{
 	height: 70px;
 	float: left;
 	text-align: left;
+	
 }
 #foto{
 	width: 100px;
 	height: 95px;
-	border: solid;
 	position: relative;
 	float: left;
 	left: 35px;
 	top:-85px;
+	border: solid;
 }
 #depende{
 	top:-85px;
-	width: 725px;
+	width: 625px;
 	height: 95px;
 	border: solid 1px;
 	position: relative;
 	margin-left: 65px;
 	float: left;
+	
 }
 #dependecadados{
 	top: -12px;
@@ -322,3 +326,8 @@ header#cabecalho{
 	text-align: center;
 	border: solid #000000;
 }
+#bntcad{
+	position: relative;
+	display: block;
+}
+

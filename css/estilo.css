@@ -2,47 +2,25 @@ body{
 	font: 300 16px;
 }
 #login{
+	top:50%;
+	margin-top: -170px;
+	left:50%;
+	margin-left: -150px;
+	text-align: center;
 	width: 300px;
-	margin: 0 auto;
-	position: relative;
-	top:250px;
-	border: 3px solid #f1f1f1;
+	position: absolute;
+	border: 3px solid black;
 	padding: 10px;
 	background-color: 
 }
-#imglogin{
-	margin-left: 90px;
+#mailsenha{
+	margin-right: 200px;
 }
-.cad{
-	display: block;
-	border: none;
-	width:250px;
-	height: 40px;
-	margin-top: 10px;
-	float: left;
-}
-
-#login label{
-	display: block;
-	padding-top: 5px;
-}
-
-#cadastrar{
-	width: 300px;
-	height: 350px;
-	margin: 0 auto;
-	position: relative;
-	top:10px;
-	border: 3px solid #f1f1f1;
-	padding: 10px;
-	
-}
-
 .txt{
 	border:none;
 	width: 250px;
 	height: 40px;
-	border: thin solid #f1f1f1;
+	border: thin solid black;
 	margin-top: 10px;
 }
 .txt:focus{
@@ -50,47 +28,24 @@ body{
 	box-shadow: 0 2px 16px #09f;
 }
 .sb{
+	position: relative;
 	display: block;
-	border: none;
-	width: 45%;
+	width: 250px;
 	height: 40px;
-	margin-top: 10px;
-	float: left;
-
-	
+	margin: 10px auto;
+	border: solid 1px;
+	margin-top: 2px;
 }
 .sb:hover{
 	background: #09f;
 	box-shadow: 0 2px 16px #09f;
 }
-
 .bradius{
-	border-radius: 6px;
+	border-radius: 10px;
 }
-.fleft{
-	float: left;
-}
-.fright{
-	float: right;
-}
-.txt,.txt:focus,.sb,.sb,.cadastrar,.cadastrar,.cad,.cad:hover {
+.txt,.txt:focus,.sb,.sb,:hover {
 	transition: all 0.5s linear;
 }
 
-.cadastrar{
-	margin-left: 55%;
-	margin-top: 10px;
-	line-height: 40px;
-	text-align: center;
-	background-color: #f1f1f1;
-     }
-.cadastrar:hover{
-    	background: #09f;
-		box-shadow: 0 2px 16px #09f;
-    }
-.cad:hover{
-		background: #09f;
-		box-shadow: 0 2px 16px #09f;
-}
 
 

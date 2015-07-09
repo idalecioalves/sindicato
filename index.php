@@ -1,4 +1,5 @@
-<?php
+
+<?php 
 ini_set('display_errors',1);
 error_reporting( E_ALL | E_STRICT );
 session_cache_limiter(false);
@@ -39,6 +40,7 @@ $app->container->singleton('banco',function() use($config)
 {
 	return new NotORM($config['PDO']);
 });
+
 
 $app->get('/', function () {
 	echo ( "<br /><br /><br /> <center> Seja bem vindo</center>");
