@@ -22,7 +22,7 @@
 <body>
   <?php include ('menu.php');?>
   <div id="comunidade" class="container">
-  <form class="form-horizontal" method="POST" action="<?php echo baseUrl().'/comunidade/lista';?>">
+  <form class="form-horizontal" method="POST" action="">
       <div class="row">
         <div class="alert-group">
           <?php if(isset($flash['info'])): ?>
