@@ -36,7 +36,7 @@
   <div class="container">
     <form class="form-horizontal" method="POST" action="">
       <div class="row">
-        <div id="comunidade" class="alert-group">
+        <div  class="alert-group">
           <?php if(isset($flash['info'])): ?>
           <div class="alert alert-info alert-dismissable in ">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -60,7 +60,7 @@
 <fieldset>      
   <div class="container">
     <div class="row">
-      <div  class="col-md-8 col-md-offset-2">
+      <div id="delegacia"  class="col-md-8 col-md-offset-2">
         <div id="delegacia" class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Cadastro de delegacias</h3>

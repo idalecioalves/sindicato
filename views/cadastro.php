@@ -5,11 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Cadastro de Aracoiaba</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
-=======
->>>>>>> d322140eeb6ef7ed03d15c719bdc4df1f7dd9e7b
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />	
 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>	
@@ -110,7 +107,7 @@
 				<div id="residcadados">
 					<div class="control-group">
 						<label for="residencia" >Residência:</label>						
-						<a href="/sindicato/delegacia/lista#comunidade" rel="modal" class="btn btn-primary">
+						<a href="/sindicato/delegacia/lista#delegacia" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="submit" id="atualiza"class="btn btn-primary" value="Salvar">
@@ -379,64 +376,10 @@
 			<input id="bntcad" type="submit" class="sb bradius" value="Cadastrar"/>
 		</form>
 	</div>
-<<<<<<< HEAD
 
-=======
->>>>>>> d322140eeb6ef7ed03d15c719bdc4df1f7dd9e7b
 	<div id="mascara"></div>
 
 </body>
-<<<<<<< HEAD
 </html>
-<script type="text/javascript">
-$.getJSON('http://localhost/sindicato/comunidade/listajson',function(data){
-	var options = "";
-	$.each(data, function(key, value){              
 
 
-		<script type="text/javascript">
-		var url=window.location.href.replace("/cadastro","");
-
-		$.getJSON(url+'/delegacia/listajson',function(data){
-			var options = "";
-			$.each(data, function(key, value){              
-
-             //console.log(value.id);
-             options += '<option value="' + value.id + '">' + value.delegaciaNome + '</option>';
-         });
-			$("select#delegacia").html(options); 
-		});
-
-		$.getJSON(url+'/comunidade/listajson',function(data){
-			var options = "";
-			$.each(data, function(key, value){              
-             //console.log(value.id);
-             options += '<option value="' + value.id + '">' + value.nome + '</option>';
-         });
-			$("select#comunidade").html(options); 
-		});
-
-		$(document).ready(function(){	
-			$("#loading").hide();
-			$("button#atualiza").click(function(){
-				$.getJSON(url+'/comunidade/listajson',function(data){
-					var options = "";
-					$.each(data, function(key, value){              
-						$("select#comunidade").html(options);   
-					});
-				});
-			});
-			$(document).ajaxStart(function() {
-				$("#loading").show();
-			}).ajaxStop(function() {
-				$("#loading").hide();
-			});
-		});
-
-		</script>
-	</body>
-	</html>
-
-=======
-</html>
->>>>>>> d322140eeb6ef7ed03d15c719bdc4df1f7dd9e7b
