@@ -56,7 +56,7 @@ $app->get('/cadastro', function () use ($app) {
 	$app->render("cadastro.php");
 });
 
-//grupo comunidade
+//############################### grupo comunidade ############################
 $app->group('/comunidade', function () use ($app) {
 
 //lista todas as comunidades
@@ -74,7 +74,6 @@ $app->group('/comunidade', function () use ($app) {
 		$app->view->setData($data);
 		$app->redirect('/comunidade/lista');
 	});
-
 
 //editar - carregar os dados no formulario para edição
 	$app->get('/edita/:id', function ($id) use ($app) {    
@@ -104,7 +103,6 @@ $app->group('/comunidade', function () use ($app) {
 		{
 			$app->flash('error', 'Registro não atualizado.');
 		}
-
 		$data['lista']=$app->banco->comunidade->order('id desc');
 		$app->view->setData($data);
 		$app->redirect('/comunidade/lista');
@@ -122,6 +120,8 @@ $app->group('/comunidade', function () use ($app) {
 	});
 
 });
+//############################ fim grupo comunidade ###################################
+
 
 $app->group('/delegacia', function () use ($app) {
 //lista todas as delegacias
@@ -130,8 +130,6 @@ $app->group('/delegacia', function () use ($app) {
 		$app->render("delegacia.php",$data);		
 	});
 });
-
-
 
 
 
