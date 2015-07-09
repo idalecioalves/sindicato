@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-<?php include ('menu.php')?>
+<?php include ('menu.php');?>
   <div id="comunidade" class="container">
     <form class="form-horizontal" method="POST" action="">
       <div class="row">
@@ -76,8 +76,8 @@
           <tr>
             <td><?php echo $campo['nome'] ?></td>
             <td class="text-center">                
-              <a title="Editar" href="<?php echo '/sindicato/comunidade/edita/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
-              <a title="Apagar" href="<?php echo '/sindicato/comunidade/delete/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
+              <a title="Editar" href="<?php echo '/comunidade/edita/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
+              <a title="Apagar" href="<?php echo '/comunidade/delete/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
             </td>            
           </tr>
         <?php endforeach; ?>
