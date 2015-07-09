@@ -277,8 +277,8 @@
     <tr>
       <td><?php echo $campo['delegaciaNome'] ?></td>
       <td class="text-center">                
-        <a title="Editar" href="<?php echo baseUrl().'/delegacia/edita/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
-        <a title="Apagar" href="<?php echo  baseUrl().'/delegacia/delete/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
+        <a title="Editar" href="<?php echo '/sindicato/delegacia/edita/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
+        <a title="Apagar" href="<?php echo '/sindicato/delegacia/delete/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
       </td>            
     </tr>
   <?php endforeach; ?>
