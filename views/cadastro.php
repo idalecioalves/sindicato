@@ -107,7 +107,7 @@
 				<div id="residcadados">
 					<div class="control-group">
 						<label for="residencia" >Residência:</label>						
-						<a href="/sindicato/delegacia/lista#delegacia" rel="modal" class="btn btn-primary">
+						<a href="/sindicato/delegacia/lista #delegacia" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="submit" id="atualiza"class="btn btn-primary" value="Salvar">

@@ -60,7 +60,7 @@
 <fieldset>      
   <div class="container">
     <div class="row">
-      <div id="delegacia"  class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2">
         <div id="delegacia" class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Cadastro de delegacias</h3>
