@@ -12,13 +12,17 @@
 <body>
 	<div id="login" class="bradius">
 		<img src="img/logo.png">
-		<form action="" method="post" >
+		<form action="<?php echo baseUrl().'/login';?>" method="POST" >
 			<label id="mailsenha" for="email">E-mail:</label>
-			<input type="text" class="txt bradius" name="email" value="">
+			<input type="text" class="txt bradius" name="email" value="<?php echo $email_value;?>">
 			<label id="mailsenha" for="senha">Senha:</label>
-			<input type="password" class="txt bradius" name="senha" value="">
-			<input type="submit" class=" sb bradius" value="Entrar"/>
+			<input type="password" class="txt bradius" name="password" value="">			
+			<input type="submit" class="sb bradius" value="Entrar"/>
 		</form>
 	</div>
+	<?php if(!empty($error['email'])):?>	
+		<p class="bg-danger"><?php echo $error;?></p>	
+	<?php endif; ?> 
+	<?php echo $email_error;?>
 </body>
 </html>
