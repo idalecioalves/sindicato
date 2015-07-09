@@ -5,14 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Cadastro de Aracoiaba</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<<<<<<< HEAD
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
-=======
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />	
->>>>>>> 2ce458f3a3e571857233a41eaf13e7e1fc4f9970
 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>	
+	<script src="<?php echo baseUrl().'/js/script.js'?>"></script>	
+
 	<script src="./js/cpf.js"></script>
 	<script src="./js/porcima.js"></script>
 	<link rel="stylesheet" href="css/cad.css" />
@@ -376,56 +373,7 @@
 
 		</form>
 	</div>
-<<<<<<< HEAD
 	<div id="mascara"></div>
-</body>
-</html>
-<script type="text/javascript">
-$.getJSON('http://localhost/sindicato/comunidade/listajson',function(data){
-	var options = "";
-	$.each(data, function(key, value){              
-=======
-
-	<script type="text/javascript">
-		var url=window.location.href.replace("/cadastro","");
-
-		$.getJSON(url+'/delegacia/listajson',function(data){
-			var options = "";
-			$.each(data, function(key, value){              
->>>>>>> 2ce458f3a3e571857233a41eaf13e7e1fc4f9970
-             //console.log(value.id);
-             options += '<option value="' + value.id + '">' + value.delegaciaNome + '</option>';
-         });
-			$("select#delegacia").html(options); 
-		});
-
-		$.getJSON(url+'/comunidade/listajson',function(data){
-			var options = "";
-			$.each(data, function(key, value){              
-             //console.log(value.id);
-             options += '<option value="' + value.id + '">' + value.nome + '</option>';
-         });
-			$("select#comunidade").html(options); 
-		});
-
-		$(document).ready(function(){	
-			$("#loading").hide();
-			$("button#atualiza").click(function(){
-				$.getJSON(url+'/comunidade/listajson',function(data){
-					var options = "";
-					$.each(data, function(key, value){              
-						$("select#comunidade").html(options);   
-					});
-				});
-			});
-			$(document).ajaxStart(function() {
-				$("#loading").show();
-			}).ajaxStop(function() {
-				$("#loading").hide();
-			});
-		});
-
-	</script>
 </body>
 </html>
 
