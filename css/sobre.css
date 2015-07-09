@@ -1,14 +1,16 @@
 .window{
+  margin-top: -1000px;
+  margin-left: -1170px;
   display:none;
-  width:300px;
-  height:300px;
+  width:900px;
+  height:500px;
   position:absolute;
-  left:0;
-  top:0;
   background:#FFF;
   z-index:9900;
   padding:10px;
   border-radius:10px;
+  border: solid;
+  
 }
 
 #mascara{
@@ -19,3 +21,5 @@
   background-color:#000;
   display:none;
 }
+
+.fechar{display:block; text-align:right;}

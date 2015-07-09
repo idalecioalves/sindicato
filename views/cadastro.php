@@ -6,13 +6,15 @@
 	<title>Cadastro de Aracoiaba</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>	
 	<script src="./js/cpf.js"></script>
+	<script src="./js/porcima.js"></script>
 	<link rel="stylesheet" href="css/cad.css" />
 	<link rel="stylesheet" href="css/estilo.css" />
 	<link rel="stylesheet" href="css/cadado.css" />
+	<link rel="stylesheet" href="css/sobre.css" />
 	<!--<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=cadastro">-->
 </head>
 <body>
@@ -95,11 +97,10 @@
 						<input id="pai" type="text" class="txtpai bradius" name="pai" >	
 					</div>
 				</div>
-
 				<div id="residcadados">
 					<div class="control-group">
 						<label for="residencia" >Residência:</label>						
-						<a href="/sindicato/comunidade/lista#comunidade" rel="modal" class="btn btn-primary">
+						<a href="/sindicato/delegacia/lista" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="submit" id="atualiza"class="btn btn-primary" value="Salvar">
@@ -113,6 +114,12 @@
 						</div>
 					</div>
 				</div>
+
+
+				<div class="window" id="janela1">
+
+				</div>
+
 
 				<div id="civgeral">
 					<div>
@@ -365,6 +372,7 @@
 
 		</form>
 	</div>
+	<div id="mascara"></div>
 </body>
 </html>
 <script type="text/javascript">
