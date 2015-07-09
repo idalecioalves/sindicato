@@ -1,7 +1,6 @@
 <?php 
 //include("classes/conexao.php");
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,19 +11,14 @@
 </head>
 <body>
 	<div id="login" class="bradius">
-		<img src="img/logo.png" id="imglogin">
-		<div class="message"></div>
-		<div class="logo"></div>
-		<div class="acomodar">
-
-			<form action="" method="post" >
-				<label for="email">E-mail:</label><input id="email" type="text" class="txt bradius" name="email" value="">
-				<label for="senha">Senha:</label><input id="senha" type="password" class="txt bradius" name="senha" value="">
-				<input type="submit" class="sb bradius" value="Entrar"/>
-				<div  class="bradius cadastrar"><a href="cadastro.php" title="Participe">Cadastrar-se &raquo;</a></div>
-			</form>
-			
-		</div>
+		<img src="img/logo.png">
+		<form action="" method="post" >
+			<label id="mailsenha" for="email">E-mail:</label>
+			<input type="text" class="txt bradius" name="email" value="">
+			<label id="mailsenha" for="senha">Senha:</label>
+			<input type="password" class="txt bradius" name="senha" value="">
+			<input type="submit" class=" sb bradius" value="Entrar"/>
+		</form>
 	</div>
 </body>
 </html>

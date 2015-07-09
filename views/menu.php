@@ -1,7 +1,7 @@
 <div class="text-center">
-	<a href="<?php echo baseUrl();?>">home</a>&nbsp;&nbsp;
-	<a href="<?php echo baseUrl();?>/login">login</a>&nbsp;&nbsp;
-	<a href="<?php echo baseUrl();?>/cadastro">cadastro</a>&nbsp;&nbsp;
-	<a href="<?php echo baseUrl();?>/comunidade/lista">comunidade</a>&nbsp;&nbsp;
-	<a href="<?php echo baseUrl();?>/delegacia/lista">delegacia</a>&nbsp;&nbsp;
+	<a href="<?php echo baseUrl();?>">INÍCIO</a>&nbsp;&nbsp;
+	<a href="<?php echo baseUrl();?>/login">LOGIN</a>&nbsp;&nbsp;
+	<a href="<?php echo baseUrl();?>/cadastro">CADASTRO</a>&nbsp;&nbsp;
+	<a href="<?php echo baseUrl();?>/comunidade/lista">COMUNIDADE</a>&nbsp;&nbsp;
+	<a href="<?php echo baseUrl();?>/delegacia/lista">DELEGACIA</a>&nbsp;&nbsp;
 </div>
