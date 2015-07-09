@@ -23,7 +23,7 @@
 
 /*Panel tabs*/
 .panel-tabs {    position: relative;    bottom: 30px;    clear:both;    border-bottom: 1px solid transparent;}
-.panel-tabs > li {    float: left;    margin-bottom: -1px;}
+.panel-tabs > li {    float: right;    margin-bottom: -1px;}
 .panel-tabs > li > a {    margin-right: 2px;    margin-top: 4px;    line-height: .85;    border: 1px solid transparent;    border-radius: 4px 4px 0 0;    color: #ffffff;}
 .panel-tabs > li > a:hover {    border-color: transparent;    color: #ffffff;    background-color: transparent;}
 .panel-tabs > li.active > a,
@@ -36,7 +36,7 @@
   <div class="container">
     <form class="form-horizontal" method="POST" action="">
       <div class="row">
-        <div class="alert-group">
+        <div id="comunidade" class="alert-group">
           <?php if(isset($flash['info'])): ?>
           <div class="alert alert-info alert-dismissable in ">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

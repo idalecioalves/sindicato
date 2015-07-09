@@ -5,12 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Cadastro de Aracoiaba</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
-=======
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />	
->>>>>>> 2ce458f3a3e571857233a41eaf13e7e1fc4f9970
 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>	
 	<script src="./js/cpf.js"></script>
@@ -22,8 +19,13 @@
 	<!--<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=cadastro">-->
 </head>
 <body>
+	
 	<?php include'menu.php'; ?>
 	<div id="geral">
+		<div class="window" id="janela1">
+
+		</div>	
+
 		<img src="img/logo.png" id="imagemlogo" class="bradius">
 		<header id="cabecalho">
 			<img src="img/topo.png" id="imgtxt">
@@ -104,7 +106,7 @@
 				<div id="residcadados">
 					<div class="control-group">
 						<label for="residencia" >Residência:</label>						
-						<a href="/sindicato/delegacia/lista" rel="modal" class="btn btn-primary">
+						<a href="/sindicato/delegacia/lista#comunidade" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="submit" id="atualiza"class="btn btn-primary" value="Salvar">
@@ -120,9 +122,7 @@
 				</div>
 
 
-				<div class="window" id="janela1">
-
-				</div>
+				
 
 
 				<div id="civgeral">
@@ -373,26 +373,26 @@
 			</div>
 
 			<input id="bntcad" type="submit" class="sb bradius" value="Cadastrar"/>
-
 		</form>
 	</div>
-<<<<<<< HEAD
+
 	<div id="mascara"></div>
+
 </body>
 </html>
 <script type="text/javascript">
 $.getJSON('http://localhost/sindicato/comunidade/listajson',function(data){
 	var options = "";
 	$.each(data, function(key, value){              
-=======
 
-	<script type="text/javascript">
+
+		<script type="text/javascript">
 		var url=window.location.href.replace("/cadastro","");
 
 		$.getJSON(url+'/delegacia/listajson',function(data){
 			var options = "";
 			$.each(data, function(key, value){              
->>>>>>> 2ce458f3a3e571857233a41eaf13e7e1fc4f9970
+
              //console.log(value.id);
              options += '<option value="' + value.id + '">' + value.delegaciaNome + '</option>';
          });
@@ -425,7 +425,7 @@ $.getJSON('http://localhost/sindicato/comunidade/listajson',function(data){
 			});
 		});
 
-	</script>
-</body>
-</html>
+		</script>
+	</body>
+	</html>
 
