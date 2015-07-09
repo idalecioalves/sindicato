@@ -6,139 +6,102 @@ session_cache_limiter(false);
 session_start();
 // MySQL 
 $config=array();
-$config['db_charset'] 		 = 'utf8'; 
-$config['db_host'] 			 = 'localhost';
-$config['db_name'] 			 = 'sindicato';	   
-$config['db_username']       = 'root';
-$config['db_password']       = '';
-$config['db_dsn']            = 'mysql:host='.$config['db_host'].';dbname='.$config['db_name'].';'.$config['db_charset'];
-$config['db_PDOAttribute']	 = array(
+$config['db_charset'] 		= 'utf8'; 
+$config['db_host'] 			= 'localhost';
+$config['db_name'] 			= 'sindicato';	   
+$config['db_username']      = 'root';
+$config['db_password']      = '';
+$config['db_dsn']           = 'mysql:host='.$config['db_host'].';dbname='.$config['db_name'].';'.$config['db_charset'];
+$config['db_PDOAttribute']	= array(
 	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 	PDO::MYSQL_ATTR_INIT_COMMAND => 'set names utf8',
 	PDO::ERRMODE_WARNING,
 	PDO::ATTR_CASE, PDO::CASE_LOWER
 	);		
-$config['PDO'] 				 = new \PDO($config['db_dsn'],$config['db_username'] ,$config['db_password'],$config['db_PDOAttribute']);
+$config['PDO'] 				= new \PDO($config['db_dsn'],$config['db_username'] ,$config['db_password'],$config['db_PDOAttribute']);
+$config['home']				=  '/cadastro'; 
 
 require 'vendor/autoload.php';
 
-
 $app = new \Slim\Slim();
 $app->config(array(
+	'mode' => 'development',
+            // Debugging
 	'debug' => true,
+            // Logging
+	'log.writer' => null,
+	'log.level' => \Slim\Log::DEBUG,
+	'log.enabled' => true,
+            // View
 	'templates.path' => 'views',
+	'view' => '\Slim\View',
+            // Cookies
+	'cookies.encrypt' => true,
+	'cookies.lifetime' => '60 minutes',
+	'cookies.path' => '/',
+	'cookies.domain' => null,
+	'cookies.secure' => true,
+	'cookies.httponly' => false,
+            // Encryption
+	'cookies.secret_key' => sha1('CHANGE_ME'),
+	'cookies.cipher' => MCRYPT_RIJNDAEL_256,
+	'cookies.cipher_mode' => MCRYPT_MODE_CBC,
+            // HTTP
+	//'http.version' => '1.1',
+            // Routing
+	'routes.case_sensitive' => true
 	));
 
-$app->add(new \Slim\Middleware\SessionCookie(
-	array(
-		'name'=>'sindicato'
-		)
-	)
-);
-
+$app->add(new \Slim\Middleware\SessionCookie(array('name'=>'sindicato')));
 $app->container->singleton('banco',function() use($config)
 {
 	return new NotORM($config['PDO']);
 });
+$app->container->singleton('config',function() use($config)
+{
+	return $config;
+});
+//########################################## end config #################################
+
+$authenticate = function ($app)
+{
+	return function () use ($app)
+	{
+		if (!isset($_SESSION['user']))
+		{
+			$_SESSION['urlRedirect'] = baseUrl().$app->config['home'];
+			$app->flash('error', 'Faça login');
+			$app->redirect(baseUrl().'/login');
+		}
+	};
+};
 
 
-$app->get('/', function () {
-	echo ( "<br /><br /><br /> <center> Seja bem vindo</center>");
+$app->get('/', function () use ($app)
+{
+	$app->redirect(baseUrl().'/login');
 });
 
-$app->get('/login', function () use ($app) {    
-	$app->render("login.php");
-});
-
-$app->get('/cadastro', function () use ($app) {    
+$app->get('/cadastro', $authenticate($app), function () use ($app) {    
 	$app->render("cadastro.php");
 });
 
-$app->get('/cadastro', function () use ($app) {    
-	$app->render("cadastro.php");
-});
+//############################### routes login ############################
+include('routes/routesLogin.php');
+//############################### routes kogin ############################
 
-//grupo comunidade
-$app->group('/comunidade', function () use ($app) {
+//############################### routes comunidade ############################
+include('routes/routesComunidade.php');
+//############################### routes comunidade ############################
 
-//lista todas as comunidades
-	$app->get('/lista', function () use ($app) {    
-		$data['lista']=$app->banco->comunidade->order('id desc');
-		$app->render("comunidade.php",$data);
-	});
-
-//adiciona comunidade
-	$app->post('/lista', function () use ($app) {    
-		$nome =	$app->request->post('nome');	
-		$app->banco->comunidade->insert(['nome'=>$nome]);
-		$app->flash('success', 'Registro inserido com suscesso.');
-		$data['lista']=$app->banco->comunidade->order('id desc');
-		$app->view->setData($data);
-		$app->redirect('/comunidade/lista');
-	});
-
-
-//editar - carregar os dados no formulario para edição
-	$app->get('/edita/:id', function ($id) use ($app) {    
-		$data['lista']=$app->banco->comunidade->order('id desc');
-		$com = $app->banco->comunidade()->where('id',$id)->fetch();		
-		if($com)
-		{
-			$data['campo'] = array('nome'=>$com['nome']);	
-		}
-		else
-		{
-			$app->flash('info', 'Registro não existe.');
-			$app->redirect('/comunidade/lista');
-		}
-		$app->render("comunidade.php",$data);	
-	});
-
-	$app->post('/edita/:id', function ($id) use ($app) {    
-		$nome =	$app->request->post('nome');	
-		$com = $app->banco->comunidade()->where('id',$id)->fetch();
-		if($com)
-		{
-			$app->flash('success', 'Registro atualizado com suscesso.');
-			$com->update(['nome'=>$nome]);
-		}
-		else
-		{
-			$app->flash('error', 'Registro não atualizado.');
-		}
-
-		$data['lista']=$app->banco->comunidade->order('id desc');
-		$app->view->setData($data);
-		$app->redirect('/comunidade/lista');
-	});
-//deleta o resgistro por id
-	$app->get('/delete/:id', function ($id) use ($app) {    
-		$com = $app->banco->comunidade()->where('id',$id)->fetch();
-		if($com){
-			$app->flash('success', 'Registro apagado com suscesso.');
-			$com->delete();
-		}
-		$data['lista']=$app->banco->comunidade->order('id desc');
-		$app->view->setData($data);
-		$app->redirect('/comunidade/lista');
-	});
-
-});
 
 $app->group('/delegacia', function () use ($app) {
 //lista todas as delegacias
 	$app->get('/lista', function () use ($app) {    
-		$data['lista']=$app->banco->delegacia->order('delegaciaId desc');
+		$data['lista']=$app->banco->delegacia->order('id desc');
 		$app->render("delegacia.php",$data);		
 	});
 });
-
-
-
-
-
-
-
 
 // referente ao ajax do campo select cadastro
 $app->get('/comunidade/listajson', function () use ($app)
@@ -146,6 +109,15 @@ $app->get('/comunidade/listajson', function () use ($app)
 		$app->response()->header('Content-Type', 'application/json;charset=utf-8');
 		echo json_encode($data,JSON_PRETTY_PRINT);
 	});
+
+
+// referente ao ajax do campo select cadastro
+$app->get('/delegacia/listajson', function () use ($app)
+	{ 	$data = $app->banco->delegacia;
+		$app->response()->header('Content-Type', 'application/json;charset=utf-8');
+		echo json_encode($data,JSON_PRETTY_PRINT);
+	});
+
 
 
 $app->run();
