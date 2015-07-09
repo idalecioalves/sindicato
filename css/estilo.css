@@ -32,9 +32,8 @@ body{
 	display: block;
 	width: 250px;
 	height: 40px;
-	margin: 10px auto;
-	border: solid 1px;
-	margin-top: 2px;
+	margin: 15px auto 10px;
+	border: 1px solid;
 }
 .sb:hover{
 	background: #09f;
