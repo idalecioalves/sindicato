@@ -31,9 +31,9 @@
 .panel-tabs > li.active > a:focus {    color: #fff;    cursor: default;    -webkit-border-radius: 2px;    -moz-border-radius: 2px;    border-radius: 2px;    background-color: rgba(255,255,255, .23);    border-bottom-color: transparent;}
 </style>
 </head>
-<body>
+<body >
   <?php include ('menu.php');?>
-  <div class="container">
+  <div  class="container">
     <form class="form-horizontal" method="POST" action="">
       <div class="row">
         <div  class="alert-group">
@@ -58,7 +58,7 @@
   </div>
 </div>
 <fieldset>      
-  <div class="container">
+  <div  class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div id="delegacia" class="panel panel-primary">
@@ -78,7 +78,7 @@
             <div class="tab-content">
               <div class="tab-pane active" id="tab1">
                 <legend>Delegacia</legend>   
-                
+
                 <div class="form-group"  >
                   <div class="col-sm-8">
                     <label for="nome" class="control-label">Nome</label>
@@ -100,7 +100,7 @@
                     <input type="text" class="form-control" id="nome" placeholder="">                      
                   </div>
                 </div>
-                
+
                 <div class="form-group">
                   <div class="col-sm-5">
                     <label for="nome" class="control-label">Cidade</label>
@@ -132,7 +132,7 @@
                 </div>
               </div>
               <!--############################ fim panel 1 ##############################-->
-              
+
               <div class="tab-pane" id="tab2">
                 <legend>Delegado</legend>
                 <div class="form-group"  >
@@ -145,7 +145,7 @@
                     <input type="text" class="form-control" id="nome" placeholder="">                      
                   </div>
                 </div>
-                
+
                 <div class="form-group">
                   <div class="col-sm-4">
                     <label for="nome" class="control-label">CPF</label>
@@ -259,13 +259,13 @@
               </div><!--############################ fim panel 4 ##############################-->
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
+</div>
 </fieldset>
 </form>
-<table class="table">
+<table class="table table-striped table-hover">
   <thead>
     <tr>
       <th>Nome</th>              

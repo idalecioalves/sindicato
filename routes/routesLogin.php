@@ -54,7 +54,7 @@ $app->post("/login", function () use ($app)
 
 	if(count($app->banco->usuario->where('email=?',$email)->where('password=?',$password))==0)
 	{
-		$errors['email'] = "Email e senha não corresponde.";		
+		$errors['email'] = "Email ou Senha não corresponde.";		
 		$app->flash('email', $email);
 		$app->flash('tipo', $tipo);	
 	}		

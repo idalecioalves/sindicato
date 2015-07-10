@@ -1,8 +1,9 @@
 .window{
-  top:50%;
-  margin-top: -250px;
-  left: 50%;
-  margin-left: -250px;
+  width: 850px;
+  height: 480px;
+  margin-top: -50px;
+  left: 40%;
+  margin-left: -150px;
   display:none;
   position:absolute;
   background:#FFF;
@@ -18,5 +19,4 @@
   background-color:#000;
   display:none;
 }
-.fechar{display:block; text-align:right;}
 
