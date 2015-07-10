@@ -32,10 +32,6 @@ header#cabecalho{
 	margin-top:5px;
 	position: relative;
 }
-#registro{
-	margin-top: -30px;
-	float: right;
-}
 #entrasaicadados{
 	width: 160px;
 	margin-top: -75px;
@@ -44,23 +40,23 @@ header#cabecalho{
 	text-align: right;
 }
 #delegaciacadados{
-	width: 250px;
+	width: 290px;
 	margin-left: 350px;
 	float: left;
 	position: relative;
-	margin-top: -35px;
+	margin-top: -50px;
 }
 #cadastrar{
 	display: block;
 	width: 840px;
-	height: 360px;
+	height: 380px;
 	border: solid 1px;
 	margin: 115px auto;
 	position:relative;
 	padding: 10px 10px 10px 10px;
 	border-radius: 8px;
 }
-#dadopescadados{
+#titulos{
 	width: 190px;
 	background-color: #666666;
 	color: #ffffff;
@@ -68,72 +64,27 @@ header#cabecalho{
 	margin-left: 30px;
 	text-align: center;
 	border: solid #000000;
+	border-radius: 8px;
 	float: left;
 	margin-top: -25px;
 }
 #nomecadados{
 	background-color: #f1f1f1;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-left: -220px;
 	line-height: 0;	
 	float: left;
 	position: relative;
+	margin-right: 10px;
 }
-#apelidocadados{
+#primeira{
 	background-color: #f1f1f1;
-	margin-top: 5px;
+	margin-top: 10px;
+	line-height: 0;	
 	float: left;
-	margin-left: 10px;
-	line-height: 0;	
 	position: relative;
-}
-#datacadados{
-	background-color: #f1f1f1;
-	margin-top: 5px;
-	float: left;
-	margin-left: 10px;
-	line-height: 0;	
-	position: relative;
-}   
-#municadados{
-	background-color: #f1f1f1;
-	margin-top: 5px;
-	float: right;
-	margin-left: 10px;
-	line-height: 0;	
-	position: relative;
+	margin-right: 10px;
 } 
-#estadocadados{
-	background-color: #f1f1f1;
-	margin-top: 20px;
-	float: left;
-	line-height: 0;	
-	position: relative;
-
-}
-#maecadados{
-	background-color: #f1f1f1;
-	margin-top: 20px;
-	float: left;
-	margin-left: 10px;
-	line-height: 0;	
-	position: relative;
-}
-#paicadados{
-	background-color: #f1f1f1;
-	margin-top: 20px;
-	float: left;
-	margin-left: 10px;
-	line-height: 0;	
-	position: relative;
-}
-#residcadados{
-	background-color: #f1f1f1;
-	float: right;
-	margin-left: 10px;
-	line-height: 0;	
-	position: relative;
-}	
 #civgeral{
 	float: left; 
 	text-align: center;
@@ -152,100 +103,7 @@ header#cabecalho{
 	width: 90px;
 	position: relative;
 }
-#conjugecadados{
-	background-color: #f1f1f1;
-	line-height: 0;	
-	float: left;
-	margin-left: 10px;
-	position: relative;
-	padding-top: 10px;
-}
-#filhocadados{
-	background-color: #f1f1f1;
-	margin-top: 10px;
-	float: left;
-	margin-left: 10px;
-	line-height: 0;	
-	position: relative;
-}
-#cpfcadados{
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-top: 10px;
-	float: left;
-	position: relative;
-}
-#iguaiscadados{
-	background-color: #f1f1f1;
-	line-height: 0;
-	margin-left: 10px;
-	padding-top: 10px;
-	float: left;
-	position: relative;
-}
-#iguais2{
-	background-color: #f1f1f1;
-	line-height: 0;
-	float: left;
-	position: relative;
-	margin-left: 10px;
-	margin-top: 10px;
-}
-#carteiracadados{
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-top: 10px;
-	float: left;
-	position: relative;
-}
 
-#resevistacadados{
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-top: 10px;
-	float: left;
-	position: relative;
-	margin-left: 10px
-}
-#identcadados{
-	height: 45px;
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-top: 10px;
-	float: left;	
-}
-#expeditorcadados{
-	height: 45px;
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-left: 10px;
-	padding-top: 10px;
-	float: left;	
-}
-#titulocadados{
-	height: 45px;
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-left: 10px;
-	padding-top: 10px;
-	float: left;	
-}
-#zonacadados{
-	height: 45px;
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-left: 10px;
-	padding-top: 10px;
-	float: left;	
-}
-#secaocadados{
-	height: 45px;
-	background-color: #f1f1f1;
-	line-height: 0;
-	padding-left: 10px;
-	padding-top: 10px;
-	float: left;	
-}
 #graucadados{
 	width: 840px;
 	margin: -85px auto;
@@ -255,46 +113,46 @@ header#cabecalho{
 	border-radius: 8px;
 	text-align: center;
 }
-#escolaridadecadados{
-	width: 180px;
-	background-color: #666666;
-	color: #ffffff;
-	font-weight: bold;
-	margin-top: -25px;
-	margin-left: 30px;
-	text-align: center;
-	border: solid #000000;
-	display: block;
-	border-radius: 6px;
-}
 #profissaocadados{
 	width: 850px;
 	margin: 110px auto;
 	border: solid 1px;
 	height: 150px;
 }
-#proficadados{
-	width:200px;
-	margin-top: -15px;
-	background-color: #666666;
-	color: #ffffff;
-	font-weight: bold;
-	margin-left: 30px;
-	text-align: center;
-	border: solid #000000;
-}
 #proflabel{
 	position: relative;
 	text-align: center;
 	float: left;
-	margin-top: 20px;
+	margin-top: 30px;
 	line-height: 40px;
+	margin-left: -190px;
 }
+#proutros{
+	position: relative;
+	text-align: center;
+	float: right;
+	margin-top: 30px;
+	line-height: 40px;
+	margin-left: -190px;
+}
+
+#procargo{
+	width: 200px;
+	height: 40px;
+	position: relative;
+	display: block;
+	margin-top: -6px;
+	line-height: 40px;
+	float: left;
+}
+
 #pro{
 	width: 135px;
 	height: 70px;
 	float: left;
+	margin-left: -25px;
 	text-align: left;
+	margin-top: 20px;
 	
 }
 #foto{
@@ -330,4 +188,180 @@ header#cabecalho{
 	position: relative;
 	display: block;
 }
+
+/*Controladores dos inputs*/
+.txtregistro{
+	margin-top: -30px;
+	border:none;
+	width: 130px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+	border: solid;
+	position: relative;
+}
+.txtentracalend{
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	text-align: center;	
+}
+.txtsaidacalend{
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	text-align: center;	
+}
+.txtmaiores{
+	border:none;
+	width: 250px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+}
+.txtmedios{
+	border:none;
+	width: 155px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	margin-top: 10px;
+	text-align: center;	
+}
+.txtpequenos{
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: left;
+	margin-top: 10px;
+}
+.cadastrar{
+	margin-left: 55%;
+	margin-top: 10px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+.cadastrar,.cadastrar,.cad,.cad:hover {
+	transition: all 0.5s linear;
+}
+.cadastrar:hover{
+    	background: #09f;
+		box-shadow: 0 2px 16px #09f;
+    }
+.cad:hover{
+		background: #09f;
+		box-shadow: 0 2px 16px #09f;
+}
+.bradius{
+	border-radius: 10px;
+}
+.txtprof{
+	margin-top: 5px;
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+}
+.txtoutroprof{
+	margin-top: 5px;
+	border:none;
+	width: 85px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;
+}
+.txtprof2{
+	margin-top: 5px;
+	border:none;
+	width: 60px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	float: right;	
+}
+.txtcalend2{
+	border:none;
+	width: 90px;
+	height: 30px;
+	border: thin solid #f1f1f1;
+	text-align: center;	
+}
+/*Delegacia*/
+.window{
+  width: 850px;
+  height: 480px;
+  margin-top: -50px;
+  left: 40%;
+  margin-left: -150px;
+  display:none;
+  position:absolute;
+  background:#FFF;
+  z-index:9900;
+  padding:10px;
+  border-radius:10px;
+}
+#mascara{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+
+/*Login*/
+
+#login{
+	top:50%;
+	margin-top: -170px;
+	left:50%;
+	margin-left: -150px;
+	text-align: center;
+	width: 300px;
+	position: absolute;
+	border: 3px solid black;
+	padding: 10px;
+	background-color: 
+}
+#mailsenha{
+	margin-right: 200px;
+}
+.txt{
+	border:none;
+	width: 250px;
+	height: 40px;
+	border: thin solid black;
+	margin-top: 10px;
+}
+.txt:focus{
+	border:thin solid #f1f1f1;
+	box-shadow: 0 2px 16px #09f;
+}
+.sb{
+	position: relative;
+	display: block;
+	width: 250px;
+	height: 40px;
+	margin: 15px auto 10px;
+	border: 1px solid;
+}
+.sb:hover{
+	background: #09f;
+	box-shadow: 0 2px 16px #09f;
+}
+.bradius{
+	border-radius: 10px;
+}
+.txt,.txt:focus,.sb,.sb,:hover {
+	transition: all 0.5s linear;
+}
+
+
+
+
+
+
 

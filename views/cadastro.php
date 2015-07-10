@@ -13,20 +13,15 @@
 	<script src="<?php echo baseUrl().'/js/script.js'?>"></script>	
 	<script src="./js/cpf.js"></script>
 	<script src="./js/porcima.js"></script>
-	<link rel="stylesheet" href="css/cad.css" />
-	<link rel="stylesheet" href="css/estilo.css" />
 	<link rel="stylesheet" href="css/cadado.css" />
-	<link rel="stylesheet" href="css/sobre.css" />
-	<!--<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=cadastro">-->
+	<!--	<META HTTP-EQUIV="REFRESH" CONTENT="2;URL=cadastro">-->
 </head>
 <body>
-	
 	<?php include'menu.php'; ?>
 	<div id="geral">
 		<div class="window" id="janela1">
 
 		</div>	
-
 		<img src="img/logo.png" id="imagemlogo" class="bradius">
 		<header id="cabecalho">
 			<img src="img/topo.png" id="imgtxt">
@@ -36,75 +31,68 @@
 		<form>
 			<div id="delegaciacadados">
 				<label for="delegacia" >Del. Sindical de:</label>
-				<select id="delegacia" class="txtdelegacia bradius" name="delegacia">
+				<select id="delegacia" class="txtmedios bradius">
 					<option>Option one</option>
 					<option>Option two</option>
 				</select>
 			</div>	
-
 			<div id="entrasaicadados">
 				<label for="calendario" >Entrada:</label>
 				<input type="text" class="txtentracalend bradius calendario"/>
 				<label for="calendario" >Saida:</label>
 				<input type="text" class="txtsaidacalend calendario bradius" />
 			</div>
-
 			<div id="cadastrar">
-				<label id="dadopescadados" class="bradius" for="dados">DADOS PESSOAIS:</label>
+				<label id="titulos" class="bradius" for="dados">DADOS PESSOAIS:</label>
 				<div id="nomecadados">
 					<label for="nome" >Nome</label>
 					<div id="camponome">
-						<input id="nome" type="text" class="txtnome bradius" name="nome" >	
+						<input id="nome" type="text" class="txtmaiores bradius" name="nome" >	
 					</div>				
 				</div>
-				<div id="apelidocadados">
+				<div id="primeira">
 					<label for="apelido" >Apelido</label>
 					<div id="campoapelido">
-						<input id="apelido" type="text" class="txtapelido bradius" name="apelido" >	
+						<input id="apelido" type="text" class="txtmaiores bradius" name="apelido" >	
 					</div>
 				</div>
-
-				<div id="datacadados">
+				<div id="primeira">
 					<label for="calendario" >Nascimento:</label>
 					<div>
-						<input type="text"  class="txtcalend bradius calendario" />			
+						<input type="text"  class="txtpequenos bradius calendario" />			
 					</div>
 				</div>
-
-				<div id="municadados">
+				<div id="primeira">
 					<label for="municipio" >Município:</label>
 					<div>
-						<input id="municpio" type="text" class="txtmuni bradius" name="municipio" >	
+						<input id="municpio" type="text" class="txtmedios bradius" name="municipio" >	
 					</div>			
 				</div>
-
-				<div id="estadocadados">
+				<div id="primeira">
 					<div id="estadobel">
 						<label for="estado" >Estado:</label>
 					</div>
 					<div>
-						<input id="estado" type="text" class="txtestado bradius" name="estado" >	
+						<input id="estado" type="text" class="txtpequenos bradius" name="estado" >	
 					</div>							
 				</div>
-
-				<div id="maecadados">
+				<div id="primeira">
 					<div id="maebel">
 						<label for="mae" >Mãe:</label>
 					</div>
 					<div>
-						<input id="mae" type="text" class="txtpai bradius" name="mae" >
+						<input id="mae" type="text" class="txtmaiores bradius" name="mae" >
 					</div>
 				</div>	
-
-				<div id="paicadados">
+				<div id="primeira">
 					<div id="paibel">
 						<label for="pai" >Pai:</label>
 					</div>
 					<div>
-						<input id="pai" type="text" class="txtpai bradius" name="pai" >	
+						<input id="pai" type="text" class="txtmaiores bradius" name="pai" >	
 					</div>
 				</div>
-				<div id="residcadados">
+				<div id="primeira">
 					<div class="control-group">
 						<label for="residencia" >Residência:</label>						
 						<a href="/sindicato/delegacia/lista#delegacia" rel="modal" class="btn btn-primary">
@@ -114,18 +102,13 @@
 							<span class="glyphicon glyphicon-refresh"></span>
 						</button>
 						<div class="controls ">
-							<select id="comunidade" name="comunidade" class="txtresid bradius">
+							<select id="comunidade" name="comunidade" class="txtmedios bradius">
 								<option>Option one</option>
 								<option>Option two</option>
 							</select>									
 						</div>
 					</div>
 				</div>
-
-
-				
-
-
 				<div id="civgeral">
 					<div>
 						<label id="civilabel" for="estadocivic" >Estado Civil:</label>	
@@ -138,181 +121,161 @@
 						<input type="radio" name="opcao" value="viuvo">Viúvo
 					</div>
 				</div>
-
-				<div id="conjugecadados">
+				<div id="primeira">
 					<div id="conjugebel">
 						<label for="conjuge" >Nome do Cônjuge:</label>
 					</div>
 					<div>
-						<input id="conjuge" type="text" class="txtconjuge bradius" name="conjuge" >	
+						<input id="conjuge" type="text" class="txtmaiores bradius" name="conjuge" >	
 					</div>							
 				</div>
-
-				<div id="filhocadados">
+				<div id="primeira">
 					<div id="filho">
 						<label id="filabel" for="filho">Filhos Menores:</label>
 					</div>
 					<div>
-						<input id="cabelo" type="text" class="txtfilho bradius" name="conjuge" >	
+						<input id="cabelo" type="text" class="txtpequenos bradius" name="conjuge" >	
 					</div>
 				</div>
-
-				<div id="cpfcadados">
+				<div id="primeira">
 					<div>
 						<label id="cpf" for="cpf" >CPF:</label>
 					</div>
 					<div id="cpf">
-						<input type="text" name="cpf" id="cpf" class="txtcpf bradius"onblur="javascript: validarCPF(this.value);"   maxlength="14" onkeypress="javascript: mascara(this, cpf_mask);">
+						<input type="text" name="cpf" id="cpf" class="txtmedios bradius"onblur="javascript: validarCPF(this.value);"   maxlength="14" onkeypress="javascript: mascara(this, cpf_mask);">
 					</div>							
 				</div>
-
-				<div id="iguaiscadados">
+				<div id="primeira">
 					<div>
 						<label id="casado" for="casado" >Cert. Casamento:</label>
 					</div>
 					<div id="casado">
-						<input id="casado" type="text" class="txtcasado bradius" name="casado">	
+						<input id="casado" type="text" class="txtpequenos bradius" name="casado">	
 					</div>							
 				</div>
-
-				<div id="iguaiscadados">
+				<div id="primeira">
 					<div>
 						<label id="pele" for="pele" >Pele:</label>
 					</div>
 					<div id="pele">
-						<input id="pele" type="text" class="txtpele bradius" name="pele" >	
+						<input id="pele" type="text" class="txtmedios bradius" name="pele" >	
 					</div>							
 				</div>
-
-				<div id="iguaiscadados">
+				<div id="primeira">
 					<div>
 						<label id="olhos" for="olhos" >Olhos:</label>
 					</div>
 					<div id="olhos">
-						<input id="olhos" type="text" class="txtolhos bradius" name="olhos" >	
+						<input id="olhos" type="text" class="txtmedios bradius" name="olhos" >	
 					</div>							
 				</div>
-
-				<div id="iguaiscadados">
+				<div id="primeira">
 					<div>
 						<label id="cabelos" for="cabelos" >Cabelos:</label>
 					</div>
 					<div id="cabelos">
-						<input id="cabelos" type="text" class="txtcabelos bradius" name="cabelos" >	
+						<input id="cabelos" type="text" class="txtmedios bradius" name="cabelos" >	
 					</div>							
 				</div>
-
-				<div id="iguaiscadados">
+				<div id="primeira">
 					<div>
 						<label id="altura" for="altura" >Altura:</label>
 					</div>
 					<div id="altura">
-						<input id="altura" type="text" class="txtaltura bradius" name="altura" >	
+						<input id="altura" type="text" class="txtpequenos bradius" name="altura" >	
 					</div>							
 				</div>	
-
-				<div id="carteiracadados">
+				<div id="primeira">
 					<div>
 						<label id="carteira" for="carteira" >Carteira Profissional Nº:</label>
 					</div>
 					<div id="Carteira">
-						<input id="carteira" type="text" class="txtcarteira bradius" name="carteira" >	
+						<input id="carteira" type="text" class="txtmedios bradius" name="carteira" >	
 					</div>							
 				</div>
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="serie" for="altura" >Série:</label>
 					</div>
 					<div id="serie">
-						<input id="serie" type="text" class="txtserie bradius" name="serie" >	
+						<input id="serie" type="text" class="txtpequenos bradius" name="serie" >	
 					</div>							
 				</div>			
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="via" for="via" >Via:</label>
 					</div>
 					<div id="via">
-						<input id="via" type="text" class="txtvia bradius" name="via" >	
+						<input id="via" type="text" class="txtpequenos bradius" name="via" >	
 					</div>							
 				</div>
-
-				<div id="resevistacadados">
+				<div id="primeira">
 					<div>
 						<label id="resevista" for="carteira" >Carteira Resevista Nº:</label>
 					</div>
 					<div id="Carteirarese">
-						<input id="Carteirarese" type="text" class="txtresevista bradius" name="resevista" >	
+						<input id="Carteirarese" type="text" class="txtmedios bradius" name="resevista" >	
 					</div>							
 				</div>	
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="serierese" for="rese" >Série:</label>
 					</div>
 					<div id="serierese">
-						<input id="serierese" type="text" class="txtserierese bradius" name="serierese" >	
+						<input id="serierese" type="text" class="txtpequenos bradius" name="serierese" >	
 					</div>							
 				</div>
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="viarese" for="via" >Via:</label>
 					</div>
 					<div id="viarese">
-						<input id="viarese" type="text" class="txtviarese bradius" name="viarese" >	
+						<input id="viarese" type="text" class="txtpequenos bradius" name="viarese" >	
 					</div>							
 				</div>	
-
-				<div id="identcadados">
+				<div id="primeira">
 					<div>
 						<label id="ident" for="carteira" >Carteira Identidade Nº:</label>
 					</div>
 					<div id="identidade">
-						<input id="identidade" type="text" class="txtidentidade bradius" name="carteira" >	
+						<input id="identidade" type="text" class="txtmedios bradius" name="carteira" >	
 					</div>							
 				</div>
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="expeditor" for="expeditor" >Orgão Exp.:</label>
 					</div>
 					<div id="expeditor">
-						<input id="expeditor" type="text" class="txtexpeditor bradius" name="expeditor" >	
+						<input id="expeditor" type="text" class="txtpequenos bradius" name="expeditor" >	
 					</div>							
 				</div>	
-
-				<div id="titulocadados">
+				<div id="primeira">
 					<div>
 						<label id="via" for="via" >Título de Eleitor Nº:</label>
 					</div>
 					<div id="titulo">
-						<input id="titulo" type="text" class="txttitulo bradius" name="titulo" >	
+						<input id="titulo" type="text" class="txtmedios bradius" name="titulo" >	
 					</div>							
 				</div>
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="zona" for="via" >Zona:</label>
 					</div>
 					<div id="zona">
-						<input id="zona" type="text" class="txtzona bradius" name="zona" >	
+						<input id="zona" type="text" class="txtpequenos bradius" name="zona" >	
 					</div>							
 				</div>
-
-				<div id="iguais2">
+				<div id="primeira">
 					<div>
 						<label id="secao" for="via" >Seção:</label>
 					</div>
 					<div id="secao">
-						<input id="secao" type="text" class="txtsecao bradius" name="secao" >	
+						<input id="secao" type="text" class="txtpequenos bradius" name="secao" >	
 					</div>
 				</div>
 			</div>
-
 			<div id="graucadados" class="bradius">
-				<label id="escolaridadecadados" for="escola">ESCOLARIDADE:</label>	
+				<label id="titulos" for="escola">ESCOLARIDADE:</label>	
 				<input type="radio" name="opcao" value="analfabeto">Analfabeto
 				<input type="radio" name="opcao" value="alfabetizado">Alfabetizado
 				<input type="radio" name="opcao" value="pgmenor">1º Grau Menor
@@ -320,9 +283,8 @@
 				<input type="radio" name="opcao" value="sgcompleto">2º Grau Completo
 				<input type="radio" name="opcao" value="sgincompleto">2º Grau Incompleto
 			</div>
-
 			<div id="profissaocadados" class="bradius">
-				<div id="proficadados" class="bradius">
+				<div id="titulos" class="bradius">
 					<label for="escola">DADOS PROFISSIONAIS:</label>
 				</div>
 				<div id="proflabel">
@@ -345,40 +307,31 @@
 					<input type="radio" name="opcao1" class="" value="sgincompleto">Assentado</br></br>
 					<input type="radio" name="opcao1" class="" value="sgincompleto">Meeiro
 				</div>
-				<div id="proflabel">
-					<label id="profissaooutros"> Outros:</label>
-					<input type="text" class=" txtoutroprof bradius" name="" >		
+				<div id="proutros">
+					<label> Outros:</label>
+					<input type="text" class=" txtoutroprof bradius" name="" >
 				</div>
-				<div id="proflabel">
-					<label id="profissaolabel2"> Cargo no Sindicato:</label>
-					<input type="text" class=" txtprof2 bradius" name="" >		
-				</div>
-
-				<div id="proflabel">
-					<label id="periodolabel" for="calendario" > se ocupa, mencionar o período:</label>	
-					<input type="text" class="txtcalend2 bradius calendario" />			
+				<div id="procargo">
+					<label for="calendario" > Cargo no Sindicato:</label>	
+					<input type="text" class="txtprof2 bradius" />
 				</div>
 
-				<div id="proflabel">
-					<label id="periodolabel" for="calendario" > Data da Admissão no Sindicato:</label>	
-					<input type="text" class="txtcalend2 bradius calendario" />			
-				</div>
+				<label for="calendario" > se ocupa, mencionar o período:</label>	
+				<input type="text" class="txtcalend2 bradius calendario" />			
+
+				<label for="calendario" > Data da Admissão no Sindicato:</label>	
+				<input type="text" class="txtcalend2 bradius calendario" />			
 			</div>
-
 			<div id="foto">
 				<!--foto-->
 			</div>
-
 			<div id="depende" class="bradius">
 				<label id="dependecadados" class="bradius" for="depende">DEPENDENTES:</label>
 			</div>
-
 			<input id="bntcad" type="submit" class="sb bradius" value="Cadastrar"/>
 		</form>
 	</div>
-
 	<div id="mascara"></div>
-
 </body>
 </html>
 
