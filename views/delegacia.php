@@ -82,22 +82,22 @@
                 <div class="form-group"  >
                   <div class="col-sm-8">
                     <label for="nome" class="control-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" required placeholder="">                     
+                    <input type="text" class="form-control" id="nome" required placeholder="" riquired>                     
                   </div>
                   <div class="col-sm-4">
                     <label for="nome" class="control-label">Data Fundação</label>
-                    <input type="text" class="form-control" id="nome" placeholder="">                     
+                    <input type="text" class="form-control" id="nome" placeholder="" >                     
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="col-sm-8">
                     <label for="Nome" class="control-label">Endereço:</label>
-                    <input type="text" class="form-control" id="nome" placeholder="">              
+                    <input type="text" class="form-control" id="nome" placeholder="" riquired>              
                   </div>  
                   <div class="col-sm-4">
                     <label for="nome" class="control-label">Bairro</label>
-                    <input type="text" class="form-control" id="nome" placeholder="">                      
+                    <input type="text" class="form-control" id="nome" placeholder="" riquired>                      
                   </div>
                 </div>
 

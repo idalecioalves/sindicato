@@ -38,6 +38,7 @@ header#cabecalho{
 	position: relative;
 	float: right;
 	text-align: right;
+	text-align: center;
 }
 #delegaciacadados{
 	width: 290px;
@@ -199,6 +200,7 @@ header#cabecalho{
 	float: right;
 	border: solid;
 	position: relative;
+	text-align: center;
 }
 .txtentracalend{
 	width: 90px;
@@ -219,6 +221,7 @@ header#cabecalho{
 	height: 30px;
 	border: thin solid #f1f1f1;
 	margin-top: 10px;
+	text-align: center;
 }
 .txtmedios{
 	border:none;
@@ -235,6 +238,7 @@ header#cabecalho{
 	border: thin solid #f1f1f1;
 	float: left;
 	margin-top: 10px;
+	text-align: center;
 }
 .cadastrar{
 	margin-left: 55%;
@@ -265,6 +269,7 @@ header#cabecalho{
 	height: 30px;
 	border: thin solid #f1f1f1;
 	float: right;
+	text-align: center;
 }
 .txtoutroprof{
 	margin-top: 5px;
@@ -273,6 +278,8 @@ header#cabecalho{
 	height: 30px;
 	border: thin solid #f1f1f1;
 	float: right;
+	text-align: center; 
+
 }
 .txtprof2{
 	margin-top: 5px;
@@ -280,7 +287,10 @@ header#cabecalho{
 	width: 60px;
 	height: 30px;
 	border: thin solid #f1f1f1;
-	float: right;	
+	float: right;
+	text-align: center;
+
+		
 }
 .txtcalend2{
 	border:none;
@@ -328,6 +338,7 @@ header#cabecalho{
 }
 #mailsenha{
 	margin-right: 200px;
+
 }
 .txt{
 	border:none;
@@ -335,6 +346,7 @@ header#cabecalho{
 	height: 40px;
 	border: thin solid black;
 	margin-top: 10px;
+	text-align: center;
 }
 .txt:focus{
 	border:thin solid #f1f1f1;
