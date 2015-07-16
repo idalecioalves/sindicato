@@ -82,6 +82,9 @@ $app->get('/', function () use ($app)
 	$app->redirect(baseUrl().'/login');
 });
 
+//############################### routes login ############################
+include('routes/routesUsuario.php');
+//############################### routes kogin ############################
 
 //############################### routes login ############################
 include('routes/routesCadastro.php');
@@ -119,9 +122,7 @@ $app->get('/delegacia/listajson', function () use ($app)
 		echo json_encode($data,JSON_PRETTY_PRINT);
 	});
 
-$app->get('/caduser', function () use ($app) {
-	$app->render("caduser.php");
-});
+
 
 
 
