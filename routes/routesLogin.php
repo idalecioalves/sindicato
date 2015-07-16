@@ -1,13 +1,13 @@
 <?php
 $app->get("/login", function () use ($app)
 {
-	$flash = $app->view()->getData('flash');	
-	$urlRedirect = baseUrl().$app->config['home'];	
+	$flash = $app->view()->getData('flash');
+	$urlRedirect = baseUrl().$app->config['home'];
 	if (isset( $_SESSION['user']))
 	{
 		$app->redirect(baseUrl().$app->config['home']);
-	}			
-	if (isset($_SESSION['urlRedirect'])) 
+	}
+	if (isset($_SESSION['urlRedirect']))
 	{
 		$urlRedirect = $_SESSION['urlRedirect'];
 	}
@@ -17,12 +17,12 @@ $app->get("/login", function () use ($app)
 	}
 
 	$email_value = $email_error = $password_error = $tipo_value = '';
-	
-	if (isset($flash['email'])) 
+
+	if (isset($flash['email']))
 	{
 		$email_value = $flash['email'];
 	}
-	if (isset($flash['tipo'])) 
+	if (isset($flash['tipo']))
 	{
 		$tipo_value = $flash['tipo'];
 	}
@@ -31,15 +31,15 @@ $app->get("/login", function () use ($app)
 	{
 		$email_error = $flash['errors']['email'];
 	}
-	if (isset($flash['errors']['password'])) 
+	if (isset($flash['errors']['password']))
 	{
 		$password_error = $flash['errors']['password'];
 	}
-	$app->render('login.php', 
-		array(		
-			'tipo_value' => $tipo_value, 
+	$app->render('login.php',
+		array(
+			'tipo_value' => $tipo_value,
 			'email_value' => $email_value,
-			'email_error' => $email_error, 					
+			'email_error' => $email_error,
 			//'urlRedirect' => $urlRedirect
 			)
 		);
@@ -54,21 +54,21 @@ $app->post("/login", function () use ($app)
 
 	if(count($app->banco->usuario->where('email=?',$email)->where('password=?',$password))==0)
 	{
-		$errors['email'] = "Email ou Senha não corresponde.";		
+		$errors['email'] = "Email ou Senha não corresponde.";
 		$app->flash('email', $email);
-		$app->flash('tipo', $tipo);	
-	}		
+		$app->flash('tipo', $tipo);
+	}
 
 	if (count($errors) > 0)
 	{
 		$app->flash('errors', $errors);
 		$app->redirect(baseUrl().'/login');
 	}
-	
-	$_SESSION['user'] = $email;
-	
 
-	if (isset($_SESSION['urlRedirect'])) 
+	$_SESSION['user'] = $email;
+
+
+	if (isset($_SESSION['urlRedirect']))
 	{
 		$tmp = $_SESSION['urlRedirect'];
 		unset($_SESSION['urlRedirect']);

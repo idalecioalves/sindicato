@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Cadastro de comunidades</title>
-  
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,14 +29,14 @@
             <div class="alert alert-info alert-dismissable in ">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               <strong><?php echo $flash['info'];?></strong>
-            </div>              
+            </div>
           <?php endif;?>
           <?php if(isset($flash['success'])):?>
             <div class="alert alert-success alert-dismissable in ">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               <strong> <?php echo $flash['success'];?></strong>
-            </div>              
-          <?php endif;?>         
+            </div>
+          <?php endif;?>
           <?php if(isset($error)): ?>
             <div class="alert alert-danger alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <fieldset>
-        <legend>Cadastro de Comunidades</legend>            
+        <legend>Cadastro de Comunidades</legend>
         <div class="control-group">
           <label class="control-label" for="nome">Nome:</label>
           <div class="controls">
@@ -57,28 +57,28 @@
               <input id="nome" name="nome" placeholder="Nome" class="form-control" required="" type="text" value="<?php echo (isset($campo['nome'])?$campo['nome']:""); ?>" >
               <span class="input-group-btn">
                 <button class="btn btn-info" type="submit">&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;</button>
-              </span>    
+              </span>
             </div>
             <p class="help-block">Digite o nome da comunidade</p>
           </div>
-        </div>          
+        </div>
       </fieldset>
     </form>
     <table class="table">
       <thead>
         <tr>
-          <th>Nome</th>              
+          <th>Nome</th>
           <th class="text-center">Ação</th>
-        </tr>            
+        </tr>
       </thead>
-      <tbody>            
+      <tbody>
         <?php foreach ($lista as $campo): ?>
           <tr>
             <td><?php echo $campo['nome'] ?></td>
-            <td class="text-center">                
+            <td class="text-center">
               <a title="Editar" href="<?php echo baseUrl().'/comunidade/edita/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
               <a title="Apagar" href="<?php echo baseUrl().'/comunidade/delete/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
-            </td>            
+            </td>
           </tr>
         <?php endforeach; ?>
       </tbody>
@@ -94,7 +94,7 @@
               <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>            
             </div>
             <div class="modal-body">
-              <div class="input-group">              
+              <div class="input-group">
                 <input type="text" class="form-control" placeholder="Pesquisar...">
                 <span class="input-group-btn">
                   <button data-dismiss="modal" class="btn btn-default" type="button">Ir</button>
@@ -107,7 +107,7 @@
     </div>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

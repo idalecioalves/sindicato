@@ -7,6 +7,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/cadado.css" />
 </head>
 <body>
@@ -19,9 +21,9 @@
 			<input type="password" class="txt bradius" name="password" required value="">			
 			<input type="submit" class="sb bradius" value="Entrar"/>
 		</form>
-		<?php if(!empty($error['email'])):?>	
-		<p class="bg-danger"><?php echo $error;?></p>	
-	<?php endif; ?> 
+		<?php if(!empty($error['email'])):?>
+		<p class="bg-danger"><?php echo $error;?></p>
+	<?php endif; ?>
 	<?php echo $email_error;?>
 </div>
 

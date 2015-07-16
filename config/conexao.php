@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 try{
 	$pdo=new PDO("mysql:host=localhost;dbname=sindicato","root", "");
