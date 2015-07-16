@@ -1,14 +1,14 @@
 
-<?php 
+<?php
 ini_set('display_errors',1);
 error_reporting( E_ALL | E_STRICT );
 session_cache_limiter(false);
 session_start();
-// MySQL 
+// MySQL
 $config=array();
-$config['db_charset'] 		= 'utf8'; 
+$config['db_charset'] 		= 'utf8';
 $config['db_host'] 			= 'localhost';
-$config['db_name'] 			= 'sindicato';	   
+$config['db_name'] 			= 'sindicato';
 $config['db_username']      = 'root';
 $config['db_password']      = '';
 $config['db_dsn']           = 'mysql:host='.$config['db_host'].';dbname='.$config['db_name'].';'.$config['db_charset'];
@@ -17,9 +17,9 @@ $config['db_PDOAttribute']	= array(
 	PDO::MYSQL_ATTR_INIT_COMMAND => 'set names utf8',
 	PDO::ERRMODE_WARNING,
 	PDO::ATTR_CASE, PDO::CASE_LOWER
-	);		
+	);
 $config['PDO'] 				= new \PDO($config['db_dsn'],$config['db_username'] ,$config['db_password'],$config['db_PDOAttribute']);
-$config['home']				=  '/cadastro'; 
+$config['home']				=  '/cadastro';
 
 require 'vendor/autoload.php';
 
@@ -98,9 +98,9 @@ include('routes/routesComunidade.php');
 
 $app->group('/delegacia', function () use ($app) {
 //lista todas as delegacias
-	$app->get('/lista', function () use ($app) {    
+	$app->get('/lista', function () use ($app) {
 		$data['lista']=$app->banco->delegacia->order('id desc');
-		$app->render("delegacia.php",$data);		
+		$app->render("delegacia.php",$data);
 	});
 });
 
@@ -118,6 +118,13 @@ $app->get('/delegacia/listajson', function () use ($app)
 		$app->response()->header('Content-Type', 'application/json;charset=utf-8');
 		echo json_encode($data,JSON_PRETTY_PRINT);
 	});
+
+$app->get('/caduser', function () use ($app) {
+	$app->render("caduser.php");
+});
+
+
+
 
 
 

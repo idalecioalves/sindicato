@@ -73,21 +73,22 @@ header#cabecalho{
 	background-color: #f1f1f1;
 	margin-top: 10px;
 	margin-left: -220px;
-	line-height: 0;	
+	line-height: 0;
 	float: left;
 	position: relative;
 	margin-right: 10px;
+
 }
 #primeira{
 	background-color: #f1f1f1;
 	margin-top: 10px;
-	line-height: 0;	
+	line-height: 0;
 	float: left;
 	position: relative;
 	margin-right: 10px;
-} 
+}
 #civgeral{
-	float: left; 
+	float: left;
 	text-align: center;
 	position: relative;
 }
@@ -95,10 +96,10 @@ header#cabecalho{
 	width: 430px;
 	height: 30px;
 	position: relative;
-	float: left; 
+	float: left;
 	border: solid 1px;
 	text-align: center;
-	line-height: 30px;	
+	line-height: 30px;
 }
 #civilabel{
 	width: 90px;
@@ -154,7 +155,7 @@ header#cabecalho{
 	margin-left: -25px;
 	text-align: left;
 	margin-top: 20px;
-	
+
 }
 #foto{
 	width: 100px;
@@ -173,7 +174,7 @@ header#cabecalho{
 	position: relative;
 	margin-left: 65px;
 	float: left;
-	
+
 }
 #dependecadados{
 	top: -12px;
@@ -206,14 +207,14 @@ header#cabecalho{
 	width: 90px;
 	height: 30px;
 	border: thin solid #f1f1f1;
-	text-align: center;	
+	text-align: center;
 }
 .txtsaidacalend{
 	width: 90px;
 	height: 30px;
 	border: thin solid #f1f1f1;
 	margin-top: 10px;
-	text-align: center;	
+	text-align: center;
 }
 .txtmaiores{
 	border:none;
@@ -229,7 +230,7 @@ header#cabecalho{
 	height: 30px;
 	border: thin solid #f1f1f1;
 	margin-top: 10px;
-	text-align: center;	
+	text-align: center;
 }
 .txtpequenos{
 	border:none;
@@ -278,7 +279,7 @@ header#cabecalho{
 	height: 30px;
 	border: thin solid #f1f1f1;
 	float: right;
-	text-align: center; 
+	text-align: center;
 
 }
 .txtprof2{
@@ -290,14 +291,13 @@ header#cabecalho{
 	float: right;
 	text-align: center;
 
-		
 }
 .txtcalend2{
 	border:none;
 	width: 90px;
 	height: 30px;
 	border: thin solid #f1f1f1;
-	text-align: center;	
+	text-align: center;
 }
 /*Delegacia*/
 .window{
@@ -334,12 +334,13 @@ header#cabecalho{
 	position: absolute;
 	border: 3px solid black;
 	padding: 10px;
-	background-color: 
+	background-color:
 }
-#mailsenha{
-	margin-right: 200px;
 
+#mailsenha{
+	float:left;
 }
+
 .txt{
 	border:none;
 	width: 250px;

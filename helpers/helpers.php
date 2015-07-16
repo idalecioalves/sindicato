@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function baseUrl($withUri = true, $appName = 'default')
 {
