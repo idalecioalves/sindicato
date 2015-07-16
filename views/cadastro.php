@@ -98,7 +98,7 @@
 						<a href="/sindicato/delegacia/lista#delegacia" rel="modal" class="btn btn-primary">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
-						<button type="submit" id="atualiza"class="btn btn-primary" value="Salvar">
+						<button id="atualiza"class="btn btn-primary" value="Salvar">
 							<span class="glyphicon glyphicon-refresh"></span>
 						</button>
 						<div class="controls ">
