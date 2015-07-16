@@ -276,6 +276,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `type_id` integer(11),
   `password` varchar(60) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
@@ -285,6 +286,6 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `name`, `email`, `password`) VALUES(1, '', 'santiagoblv@gmail.com', '123');
-INSERT INTO `usuario` (`id`, `name`, `email`, `password`) VALUES(2, '', 'idalecioprof@gmail.com', '123');
+INSERT INTO `usuario` (`id`, `name`, `email`, `type_id`, `password`) VALUES(1, 'Santiago', 'santiagoblv@gmail.com', '1', '123');
+INSERT INTO `usuario` (`id`, `name`, `email`, `type_id`, `password`) VALUES(2, 'Idalecio', 'idalecioprof@gmail.com','1', '123');
 
