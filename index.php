@@ -82,9 +82,10 @@ $app->get('/', function () use ($app)
 	$app->redirect(baseUrl().'/login');
 });
 
-$app->get('/cadastro', $authenticate($app), function () use ($app) {    
-	$app->render("cadastro.php");
-});
+
+//############################### routes login ############################
+include('routes/routesCadastro.php');
+//############################### routes kogin ############################
 
 //############################### routes login ############################
 include('routes/routesLogin.php');
