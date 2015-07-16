@@ -26,6 +26,7 @@
 			<select required id="" name="" class="txt  bradius">
 				<option>Administrador</option>
 				<option>Usuário</option>
+				<input type="submit" class="sb txt bradius" name="" value="Cadastrar">
 			</form>
 		</div>
 	</body>
