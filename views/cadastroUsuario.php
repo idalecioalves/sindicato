@@ -17,15 +17,16 @@
 		<img src="img/logo.png">
 		<form action="" method="POST" >
 			<label id="mailsenha" for="">Nome:</label>
-			<input type="text" class="txt bradius" name="" value="">
+			<input type="text" class="txt bradius" name="name" value="">			
 			<label id="mailsenha" for="">Senha:</label>
-			<input type="password" class="txt bradius" name="" value="">
+			<input type="password" class="txt bradius" name="password" value="">
 			<label id="mailsenha" for="">Repita Senha:</label>
-			<input type="password" class="txt bradius" name="" value="">
+			<input type="password" class="txt bradius" name="password_confirm" value="">
 			<label id="mailsenha" for="">Nível:</label>
-			<select required id="" name="" class="txt  bradius">
-				<option>Administrador</option>
-				<option>Usuário</option>
+			<select required id="" name="type_id" class="txt  bradius">
+				<option value="1">Administrador</option>
+				<option value="2">Usuário</option>
+			</select>
 				<input type="submit" class="sb txt bradius" name="" value="Cadastrar">
 			</form>
 		</div>
