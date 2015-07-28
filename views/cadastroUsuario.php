@@ -1,5 +1,5 @@
 <?php
-//include("classes/conexao.php");
+include "./config/conexao.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,22 +13,45 @@
 </head>
 <body>
 	<?php include'menu.php'; ?>
-	<div id="login" class="bradius">
+	<div id="cadastro" class="bradius">
 		<img src="img/logo.png">
-		<form action="" method="POST" >
-			<label id="mailsenha" for="">Nome:</label>
-			<input type="text" class="txt bradius" name="name" value="" required />
-			<label id="mailsenha" for="">Senha:</label>
-			<input type="password" class="txt bradius" name="password" value="" required />
-			<label id="mailsenha" for="">Repita Senha:</label>
-			<input type="password" class="txt bradius" name="password_confirm" value="" required />
-			<label id="mailsenha" for="">Nível:</label>
-			<select required id="" name="type_id" class="txt  bradius">
+		<form action="<?php echo baseUrl().'/usuario';?>" method="POST" >
+			<label id="mailsenha">Nome:</label>
+			<input type="text" class="txt bradius" name="nome" value="" required />
+			<label id="mailsenha">E-mail:</label>
+			<input type="email" class="txt bradius" name="email" value="" required />
+			<label id="mailsenha">Senha:</label>
+			<input type="password" class="txt bradius" name="senha" value="" required />
+			<label id="mailsenha">Repita Senha:</label>
+			<input type="password" class="txt bradius" name="repsenha" value="" required />
+			<label id="mailsenha">Nível:</label>
+			<select id="" name="nivel" class="txt  bradius">
 				<option value="1">Administrador</option>
 				<option value="2">Usuário</option>
 			</select>
-				<input type="submit" class="sb txt bradius" name="" value="Cadastrar">
-			</form>
-		</div>
-	</body>
-	</html>
+			<input type="submit" class="sb txt bradius" name="cadastrar" value="Cadastrar">
+		</form>
+		<?php
+		if (isset($_POST['cadastrar'])){
+			$nome = ($_POST["nome"]);
+			$email = ($_POST["email"]);
+			$senha = $_POST["senha"];
+			$repsenha=$_POST["repsenha"];
+			$nivel = ($_POST["nivel"]);
+		}
+		if ($senha!=$repsenha) {
+			echo "As senhas não são iguais!";
+		}elseif (filter_var($email,FILTER_VALIDATE_EMAIL)){
+			$cadastrar=$pdo->prepare("INSERT INTO usuario (nome,email,senha,nivel)VALUES(:nome,:email,:senha,:nivel)");
+			$cadastrar->bindValue(":nome",$nome);
+			$cadastrar->bindValue(":email",$email);
+			$cadastrar->bindValue(":senha",$senha);
+			$cadastrar->bindValue(":nivel",$nivel);
+			$cadastrar->execute();
+		}else{
+			echo "E-mail inválido";
+		}
+		?>
+	</div>
+</body>
+</html>

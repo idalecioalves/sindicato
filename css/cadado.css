@@ -334,7 +334,6 @@ header#cabecalho{
 	position: absolute;
 	border: 3px solid black;
 	padding: 10px;
-	background-color:
 }
 
 #mailsenha{
@@ -370,6 +369,18 @@ header#cabecalho{
 }
 .txt,.txt:focus,.sb,.sb,:hover {
 	transition: all 0.5s linear;
+}
+/*Cadastro de usuários*/
+#cadastro{
+	top:50%;
+	margin-top: -230px;
+	left:50%;
+	margin-left: -150px;
+	text-align: center;
+	width: 300px;
+	position: absolute;
+	border: 3px solid black;
+	padding: 10px;
 }
 
 
