@@ -12,15 +12,17 @@ include "./config/conexao.php";
 	<link rel="stylesheet" href="<?php echo baseUrl().'/css/cadado.css';?>" />
 </head>
 <body>
+
+
 	<?php include'menu.php'; ?>
 	<div id="cadastro" class="bradius">
 		<img src="<?php echo baseUrl().'/img/logo.png'?>">
 
 		<form action="<?php echo baseUrl().'/usuario/cadastro';?>" method="POST" >
 			<label id="mailsenha">Nome:</label>
-			<input type="text" class="txt bradius" name="nome" value="" required />
+			<input type="text" class="txt bradius" name="nome" value="<?php echo (isset($campo['name'])?$campo['name']:'');?>" required />
 			<label id="mailsenha">E-mail:</label>
-			<input type="email" class="txt bradius" name="email" value="" required />
+			<input type="email" class="txt bradius" name="email" value="<?php echo (isset($campo['email'])?$campo['email']:'');?>" required />
 			<label id="mailsenha">Senha:</label>
 			<input type="password" class="txt bradius" name="senha" value="" required />
 			<label id="mailsenha">Repita Senha:</label>

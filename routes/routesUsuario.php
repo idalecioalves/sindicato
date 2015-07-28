@@ -3,8 +3,7 @@ $app->get('/usuario/cadastro', function () use ($app) {
 	$app->render("cadastroUsuario.php");
 });
 
-$app->post('/usuario/cadastro',function() use ($app){
-	
+$app->post('/usuario/cadastro',function() use ($app){	
 	//pega valores do form
 	$nome = $app->request->post('nome'); //ok
 	$email =$app->request->post('email'); //ok
@@ -12,25 +11,26 @@ $app->post('/usuario/cadastro',function() use ($app){
 	$repsenha = $app->request->post('repsenha'); //ok
 	$nivel = $app->request->post('nivel'); //ok
 
+	if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+	{
+		$app->flash('error', 'email invalido!.');
+		$app->view->setData($data['campo']=['name'=>$nome,'email'=>$email]);
+		$app->render("cadastroUsuario.php",$data);	
+	}
 	//validando a senha e confirma senha
 	if ($senha!=$repsenha)
 	{
 		$app->flash('error', 'As senhas não são iguais!.');
-		$app->redirect(baseUrl().'/usuario/cadastro');
+		$app->view->setData($data['campo']=['name'=>$nome,'email'=>$email]);		
+		$app->render("cadastroUsuario.php",$data);		
 	}
-	if(!filter_var($email,FILTER_VALIDATE_EMAIL))
-	{
-		$app->flash('error', 'email invalido!.');
-		$app->redirect(baseUrl().'/usuario/cadastro');
-	}
-
+	
 	$data = array(
 	'name'=> $nome, //name referente ao banco;
 	'email'=>$email,//email referente ao banco;
 	'password'=>$senha,//password referente ao banco;
 	'type_id'=>$nivel,
 	);	
-
 
 	//salva os registo no banco
 	$app->banco->usuario->insert($data);
@@ -44,4 +44,3 @@ $app->post('/usuario/cadastro',function() use ($app){
 
 
 
-		
