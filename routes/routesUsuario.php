@@ -51,35 +51,38 @@ $app->group('/usuario', function () use ($app)
 			$errors['password_confirm'] = "As senhas não são iguais!.";						
 		}
 
-	/**
-	 * para implementar
-	 * rotina valida se o emeil ja foi cadastrado
-	 ******************************************************/
+		$flag = $app->banco->usuario()->where('email',$email)->count();
+		if($flag>=1)
+		{
+			$errors['error_email'] = "Este emial já enconta-se cadastratro";			
+		}
 
-	if (count($errors) > 0)
-	{
-		$app->flash('nome', $nome);
-		$app->flash('email', $email);
-		$app->flash('nivel', $nivel);
-		$app->flash('errors', $errors);
-		$app->redirect(baseUrl().'/usuario/lista');
-	}
+		if (count($errors) > 0)
+		{
+			$app->flash('nome', $nome);
+			$app->flash('email', $email);
+			$app->flash('nivel', $nivel);
+			$app->flash('errors', $errors);
+			$app->redirect(baseUrl().'/usuario/lista');
+		}
 
-	$data = array(
-		'name'=> $nome, 
-		'email'=>$email,
-		'password'=>$senha,
-		'type_id'=>$nivel,
-		);	
+		$data = array(
+			'name'=> $nome, 
+			'email'=>$email,
+			'password'=>$senha,
+			'type_id'=>$nivel,
+			);	
 
+		$flag = $app->banco->usuario->insert($data);
 
-	//$app->banco->usuario->insert($data);
-	$app->flash('success', 'Registro inserido com suscesso.');
-	//$data['lista']=$app->banco->comunidade->order('id desc');
-	//$app->view->setData($data);
-	$app->redirect(baseUrl().'/usuario/lista');
-
-});
+		if (is_null($flag)) {
+			$app->redirect(baseUrl().'/usuario/lista');
+		}
+		$app->flash('success', 'Registro inserido com suscesso.');	
+		$data['lista'] = $app->banco->usuario->order('id desc');
+		$data['nivel'] = [1=>'Administrador',2=>'usuário'];
+		$app->render("cadastroUsuario.php",$data);		
+	});
 
 $app->get('/edita/:id', function ($id) use ($app) {});
 $app->post('/edita/:id', function ($id) use ($app) {});
