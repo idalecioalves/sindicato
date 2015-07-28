@@ -9,13 +9,14 @@ include "./config/conexao.php";
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/cadado.css" />
+	<link rel="stylesheet" href="<?php echo baseUrl().'/css/cadado.css';?>" />
 </head>
 <body>
 	<?php include'menu.php'; ?>
 	<div id="cadastro" class="bradius">
-		<img src="img/logo.png">
-		<form action="<?php echo baseUrl().'/usuario';?>" method="POST" >
+		<img src="<?php echo baseUrl().'/img/logo.png'?>">
+		
+		<form action="<?php echo baseUrl().'/usuario/cadastro';?>" method="POST" >
 			<label id="mailsenha">Nome:</label>
 			<input type="text" class="txt bradius" name="nome" value="" required />
 			<label id="mailsenha">E-mail:</label>
@@ -30,28 +31,34 @@ include "./config/conexao.php";
 				<option value="2">Usuário</option>
 			</select>
 			<input type="submit" class="sb txt bradius" name="cadastrar" value="Cadastrar">
-		</form>
-		<?php
-		if (isset($_POST['cadastrar'])){
-			$nome = ($_POST["nome"]);
-			$email = ($_POST["email"]);
-			$senha = $_POST["senha"];
-			$repsenha=$_POST["repsenha"];
-			$nivel = ($_POST["nivel"]);
-		}
-		if ($senha!=$repsenha) {
-			echo "As senhas não são iguais!";
-		}elseif (filter_var($email,FILTER_VALIDATE_EMAIL)){
-			$cadastrar=$pdo->prepare("INSERT INTO usuario (nome,email,senha,nivel)VALUES(:nome,:email,:senha,:nivel)");
-			$cadastrar->bindValue(":nome",$nome);
-			$cadastrar->bindValue(":email",$email);
-			$cadastrar->bindValue(":senha",$senha);
-			$cadastrar->bindValue(":nivel",$nivel);
-			$cadastrar->execute();
-		}else{
-			echo "E-mail inválido";
-		}
-		?>
+		</form>		
 	</div>
+
+
+
+
+
+	<div class="row">
+        <div class="alert-group">
+          <?php if(isset($flash['info'])): ?>
+            <div class="alert alert-info alert-dismissable in ">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <strong><?php echo $flash['info'];?></strong>
+            </div>
+          <?php endif;?>
+          <?php if(isset($flash['success'])):?>
+            <div class="alert alert-success alert-dismissable in ">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <strong> <?php echo $flash['success'];?></strong>
+            </div>
+          <?php endif;?>
+          <?php if(isset($error)): ?>
+            <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <strong><?php echo $flash['error'];?></strong>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
 </body>
 </html>
