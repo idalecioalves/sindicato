@@ -15,7 +15,7 @@ include "./config/conexao.php";
 	<?php include'menu.php'; ?>
 	<div id="cadastro" class="bradius">
 		<img src="<?php echo baseUrl().'/img/logo.png'?>">
-		
+
 		<form action="<?php echo baseUrl().'/usuario/cadastro';?>" method="POST" >
 			<label id="mailsenha">Nome:</label>
 			<input type="text" class="txt bradius" name="nome" value="" required />
@@ -30,13 +30,9 @@ include "./config/conexao.php";
 				<option value="1">Administrador</option>
 				<option value="2">Usuário</option>
 			</select>
-			<input type="submit" class="sb txt bradius" name="cadastrar" value="Cadastrar">
-		</form>		
+			<input type="submit" class="sb txt bradius" name="h2727t6" value="5445 ">
+		</form>
 	</div>
-
-
-
-
 
 	<div class="row">
         <div class="alert-group">
@@ -58,7 +54,7 @@ include "./config/conexao.php";
               <strong><?php echo $flash['error'];?></strong>
             </div>
           <?php endif; ?>
-        </div>
+        </div>vb                                 ggjjkj
       </div>
 </body>
 </html>

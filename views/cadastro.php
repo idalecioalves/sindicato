@@ -31,16 +31,16 @@
 		<form method="post">
 			<div id="delegaciacadados">
 				<label for="delegacia" >Del. Sindical de:</label>
-				<select id="delegacia" class="txtmedios bradius">
+				<select id="delegacia" name="delegacia" class="txtmedios bradius">
 					<option>Option one</option>
 					<option>Option two</option>
 				</select>
 			</div>
 			<div id="entrasaicadados">
 				<label for="calendario" >Entrada:</label>
-				<input type="text" class="txtentracalend bradius calendario" required/>
+				<input type="text" name="entra" class="txtentracalend bradius calendario" required/>
 				<label for="calendario" >Saida:</label>
-				<input type="text" class="txtsaidacalend calendario bradius" />
+				<input type="text" name="sai" class="txtsaidacalend calendario bradius" />
 			</div>
 			<div id="cadastrar">
 				<label id="titulos" class="bradius" for="dados">DADOS PESSOAIS:</label>
@@ -59,7 +59,7 @@
 				<div id="primeira">
 					<label for="calendario" >Nascimento:</label>
 					<div>
-						<input type="text"  class="txtpequenos bradius calendario" required/>
+						<input type="text" name="calendnascimento"  class="txtpequenos bradius calendario" required/>
 					</div>
 				</div>
 				<div id="primeira">
@@ -134,7 +134,7 @@
 						<label id="filabel" for="filho">Filhos Menores:</label>
 					</div>
 					<div>
-						<input id="cabelo" type="text" class="txtpequenos bradius" name="conjuge" >
+						<input id="cabelo" type="text" class="txtpequenos bradius" name="filhos" >
 					</div>
 				</div>
 				<div id="primeira">
@@ -190,7 +190,7 @@
 						<label id="carteira" for="carteira" >Carteira Profissional Nº:</label>
 					</div>
 					<div id="Carteira">
-						<input id="carteira" type="text" class="txtmedios bradius" name="carteira" required />	
+						<input id="carteira" type="text" class="txtmedios bradius" name="carteiraprofissional" required />	
 					</div>
 				</div>
 				<div id="primeira">
@@ -198,7 +198,7 @@
 						<label id="serie" for="altura" >Série:</label>
 					</div>
 					<div id="serie">
-						<input id="serie" type="text" class="txtpequenos bradius" name="serie" required />
+						<input id="serie" type="text" class="txtpequenos bradius" name="serieprofissional" required />
 					</div>
 				</div>
 				<div id="primeira">
@@ -206,7 +206,7 @@
 						<label id="via" for="via" >Via:</label>
 					</div>
 					<div id="via">
-						<input id="via" type="text" class="txtpequenos bradius" name="via" required />
+						<input id="via" type="text" class="txtpequenos bradius" name="viaprofissional" required />
 					</div>
 				</div>
 				<div id="primeira">
@@ -238,7 +238,7 @@
 						<label id="ident" for="carteira" >Carteira Identidade Nº:</label>
 					</div>
 					<div id="identidade">
-						<input id="identidade" type="text" class="txtmedios bradius" name="carteira" required />
+						<input id="identidade" type="text" class="txtmedios bradius" name="carteiraident" required />
 					</div>
 				</div>
 				<div id="primeira">
@@ -289,7 +289,7 @@
 				</div>
 				<div id="proflabel">
 					<label id="profissaolabel"> Profissão:</label>
-					<input type="text" class=" txtprof bradius" name="" required />
+					<input type="text" class=" txtprof bradius" name="profissão" required />
 				</div>
 				<div id="pro">
 					<input type="radio" name="opcao1" class="" value="analfabeto">Produtor</br></br>
@@ -309,18 +309,18 @@
 				</div>
 				<div id="proutros">
 					<label> Outros:</label>
-					<input type="text" class=" txtoutroprof bradius" name="" >
+					<input type="text" class=" txtoutroprof bradius" name="outros" >
 				</div>
 				<div id="procargo">
 					<label for="calendario" > Cargo no Sindicato:</label>
-					<input type="text" class="txtprof2 bradius" required />
+					<input type="text" name="cargo" class="txtprof2 bradius" required />
 				</div>
 
 				<label for="calendario" > se ocupa, mencionar o período:</label>
-				<input type="text" class="txtcalend2 bradius calendario" required />
+				<input type="text" name="calendfuncaosind" class="txtcalend2 bradius calendario" required />
 
 				<label for="calendario" > Data da Admissão no Sindicato:</label>
-				<input type="text" class="txtcalend2 bradius calendario" required />
+				<input type="text" name="calendadmicao" class="txtcalend2 bradius calendario" required />
 			</div>
 			<div id="foto">
 				<!--foto-->
@@ -328,7 +328,7 @@
 			<div id="depende" class="bradius">
 				<label id="dependecadados" class="bradius" for="depende">DEPENDENTES:</label>
 			</div>
-			<input id="bntcad" type="submit" class="sb bradius" value="Cadastrar"/>
+			<input id="bntcad" type="submit" name="dependente" class="sb bradius" value="Cadastrar"/>
 		</form>
 	</div>
 	<div id="mascara"></div>
