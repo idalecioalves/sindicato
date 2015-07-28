@@ -53,7 +53,7 @@ $app->group('/usuario', function () use ($app)
 
 	/**
 	 * para implementar
-	 * rotina valiada se o emeil ja foi cadastrado
+	 * rotina valida se o emeil ja foi cadastrado
 	 ******************************************************/
 
 	if (count($errors) > 0)
