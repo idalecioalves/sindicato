@@ -82,9 +82,9 @@ $app->get('/', function () use ($app)
 	$app->redirect(baseUrl().'/login');
 });
 
-//############################### routes login ############################
+//############################### routes usuario ############################
 include('routes/routesUsuario.php');
-//############################### routes kogin ############################
+//############################### routes usuario ############################
 
 //############################### routes login ############################
 include('routes/routesCadastro.php');
