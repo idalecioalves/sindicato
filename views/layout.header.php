@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css1" />
 	<link rel="stylesheet" href="<?php echo baseUrl().'/css/bootstrap.css';?>">
 	<link rel="stylesheet" href="<?php echo baseUrl().'/css/cadado.css';?>" />
-	<link rel="stylesheet" href="<?php echo baseUrl().'/css/style.css';?>" />	
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/nakupanda/bootstrap3-dialog/master/dist/css/bootstrap-dialog.min.css">
+	<link rel="stylesheet" href="<?php echo baseUrl().'/css/style.css';?>" />		
 </head>
 <body>
 

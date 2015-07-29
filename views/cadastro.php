@@ -1,6 +1,27 @@
 <?php include ('layout.header.php');?>
 <?php include ('layout.menu.php');?>
 <?php include ('layout.alert.php');?>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Comunidade</h4>
+			</div>
+			<div class="modal-body">
+				<iframe width="100%" height="100%" frameborder="0" scrolling="yes" allowtransparency="true" src="/sindicato/delegacia/lista#delegacia"></iframe>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <div id="geral">
 	<div class="window" id="janela1"></div>
 	<img src="img/logo.png" id="imagemlogo" class="bradius">
@@ -75,10 +96,10 @@
 			</div>
 			<div id="primeira">
 				<div class="control-group">
-					<label for="residencia" >Residência:</label>
-					<a href="/sindicato/delegacia/lista#delegacia" rel="modal" class="btn btn-primary">
+					<label for="residencia">Residência:</label>
+					<button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">
 						<span class="glyphicon glyphicon-pencil"></span>
-					</a>
+					</button>
 
 					<button id="atualiza"class="btn btn-primary" value="Salvar">
 						<span class="glyphicon glyphicon-refresh"></span>
