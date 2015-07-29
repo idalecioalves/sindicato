@@ -1,4 +1,4 @@
-
+/*
 $(document).ready(function(){
   $("a[rel=modal]").click( function(ev){
     ev.preventDefault();
@@ -38,3 +38,4 @@ $(document).ready(function(){
     $(".window").hide();
   });
 });
+*/

@@ -1,12 +1,12 @@
 <?php include ('layout.header.php');?>
-<?php include ('layout.menu.php');?>
+<?php //include ('layout.menu.php');?>
 <?php include ('layout.alert.php');?>
 
 <div id="comunidade" class="container">
   <form class="form-horizontal" method="POST" action="">
     <div class="row">        
       <fieldset>
-        <legend>Cadastro de Comunidades</legend>
+        <!-- <legend>Cadastro de Comunidades</legend> -->
         <div class="control-group">
           <label class="control-label" for="nome">Nome:</label>
           <div class="controls">

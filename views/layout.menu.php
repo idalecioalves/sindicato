@@ -14,8 +14,7 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
 			<!-- <li><a href="<?php echo baseUrl();?>/login">LOGIN</a></li> -->
-			<li><a href="<?php echo baseUrl();?>/cadastro">CADASTRO</a></li>
-			<li><a href="<?php echo baseUrl();?>/comunidade/lista">COMUNIDADE</a></li>
+			<li><a href="<?php echo baseUrl();?>/cadastro">CADASTRO</a></li>			
 			<li><a href="<?php echo baseUrl();?>/usuario/lista">USUÁRIOS</a></li>
 			<li><a href="<?php echo baseUrl();?>/delegacia/lista">DELEGACIA</a></li>
 			

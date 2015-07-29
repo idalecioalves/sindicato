@@ -1,6 +1,6 @@
 <?php include ('layout.header.php');?>
-<?php //include ('layout.menu.php');?>
-<?php //include ('layout.alert.php');?>
+<?php include ('layout.menu.php');?>
+<?php include ('layout.alert.php');?>
 <div  class="container">
    <form class="form-horizontal" method="POST" action="">     
       <fieldset>      
