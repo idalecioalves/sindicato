@@ -54,7 +54,7 @@ $app->group('/usuario', function () use ($app)
 		$flag = $app->banco->usuario()->where('email',$email)->count();
 		if($flag>=1)
 		{
-			$errors['error_email'] = "Este emial já enconta-se cadastratro";			
+			$errors['error_email'] = "Este emial já enconta-se cadastrato";			
 		}
 
 		if (count($errors) > 0)
@@ -74,17 +74,32 @@ $app->group('/usuario', function () use ($app)
 			);	
 
 		$flag = $app->banco->usuario->insert($data);
-
 		if (is_null($flag)) {
 			$app->redirect(baseUrl().'/usuario/lista');
-		}
-		$app->flash('success', 'Registro inserido com suscesso.');	
+		}			
 		$data['lista'] = $app->banco->usuario->order('id desc');
 		$data['nivel'] = [1=>'Administrador',2=>'usuário'];
+		$data['flash']['success'] = 'Registro inserido com suscesso.';				
 		$app->render("cadastroUsuario.php",$data);		
 	});
 
-$app->get('/edita/:id', function ($id) use ($app) {});
+$app->get('/edita/:id', function ($id) use ($app) {
+	$data['lista']=$app->banco->usuario->order('id desc');
+	$com = $app->banco->usuario()->where('id',$id)->fetch();
+	if($com)
+	{
+		$data['nome_value'] = $com['name'];
+		$data['email_value'] = $com['email'];
+		$data['nivel_value'] = $com['type_id'];
+	}
+	else
+	{
+		$app->flash('info', 'Registro não existe.');
+		$app->redirect(baseUrl().'/usuario/lista');
+	}
+	$data['nivel'] = [1=>'Administrador',2=>'usuário'];
+	$app->render("cadastroUsuario.php",$data);
+});
 $app->post('/edita/:id', function ($id) use ($app) {});
 $app->get('/delete/:id', function ($id) use ($app) {});
 

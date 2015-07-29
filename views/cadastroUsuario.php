@@ -71,6 +71,7 @@
 		<thead>
 			<tr>
 				<th>Nome</th>
+				<th>Email</th>
 				<th class="text-center">Ação</th>
 			</tr>
 		</thead>
@@ -78,6 +79,7 @@
 			<?php foreach ($lista as $campo): ?>
 				<tr>
 					<td><?php echo $campo['name'] ?></td>
+					<td><?php echo $campo['email'] ?></td>
 					<td class="text-center">
 						<a title="Editar" href="<?php echo baseUrl().'/usuario/edita/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
 						<a title="Apagar" href="<?php echo baseUrl().'/usuario/delete/'.$campo['id']?>"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></a>&nbsp;&nbsp;
