@@ -2,28 +2,26 @@
 <?php include ('layout.menu.php');?>
 <?php include ('layout.alert.php');?>
 
-<!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">Comunidade</h4>
+
+				<h4 class="modal-title">Cadastro de Comunidades</h4>
 			</div>
 			<div class="modal-body">
-				<iframe width="100%" height="100%" frameborder="0" scrolling="yes" allowtransparency="true" src="/sindicato/delegacia/lista#delegacia"></iframe>
+				<iframe width="100%" height="100%" frameborder="0" scrolling="yes" allowtransparency="true" src="/sindicato/comunidade/lista"></iframe>
 			</div>
-			<div class="modal-footer">
+			<!--<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+			</div>-->
+		</div>
+	</div>
+</div>
 
-
-<div id="geral">
-	<div class="window" id="janela1"></div>
+<div id="geral">	
 	<img src="img/logo.png" id="imagemlogo" class="bradius">
 	<header id="cabecalho">
 		<img src="img/topo.png" id="imgtxt">
@@ -334,7 +332,5 @@
 	<input id="bntcad" type="submit" name="dependente" class="sb bradius" value="Cadastrar"/>
 </form>
 </div>
-<div id="mascara"></div>
-
 <?php include 'layout.footer.php'; ?>
 
