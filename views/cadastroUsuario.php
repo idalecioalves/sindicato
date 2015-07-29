@@ -1,22 +1,10 @@
-<?php
-//include "./config/conexao.php";
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo baseUrl().'/css/cadado.css';?>" />
-</head>
-<body>
-	<?php include('menu.php');?>
+<?php include ('layout.header.php');?>
+<?php include ('layout.menu.php');?>
+<?php include ('layout.alert.php');?>
+
 	<div id="cadastro" class="bradius">
 		<img src="<?php echo baseUrl().'/img/logo.png'?>">
-		<form action="" method="POST" >			
-			<?php include('alert.php');?>
+		<form action="" method="POST" >						
 			<fieldset>
 				<label id="mailsenha">Nome:</label>
 				<input type="text" class="txt bradius" name="nome" value="<?php echo (isset($nome_value)?$nome_value:'');?>" required />
@@ -59,7 +47,4 @@
 		</tbody>
 	</table>
 
-
-
-</body>
-</html>
+<?php include 'layout.footer.php'; ?>
