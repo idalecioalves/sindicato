@@ -15,7 +15,7 @@
 	<?php include('menu.php');?>
 	<div id="cadastro" class="bradius">
 		<img src="<?php echo baseUrl().'/img/logo.png'?>">
-		<form action="" method="POST" >			
+		<form action="" method="POST" >
 			<?php include('alert.php');?>
 			<fieldset>
 				<label id="mailsenha">Nome:</label>
@@ -27,16 +27,16 @@
 				<label id="mailsenha">Repita Senha:</label>
 				<input type="password" class="txt bradius" name="repsenha" value="" required />
 				<label id="mailsenha">Nível:</label>
-				<select id="" name="nivel" class="txt  bradius">					
+				<select id="" name="nivel" class="txt  bradius">
 					<?php foreach ($nivel as $key => $value): ?>
 						<?php echo '<option value="'.$key.'"'.selected($key,(isset($nivel_value)?$nivel_value:'-1')).'>'.$value.'</option>'; ?>
 					<?php endforeach; ?>
 				</select>
 				<input type="submit" class="sb txt bradius" name="cadastrar" value="Cadastrar">
 			</fieldset>
-		</form>		
+		</form>
 	</div>
-	
+
 	<table class="table">
 		<thead>
 			<tr>
