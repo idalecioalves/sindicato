@@ -42,14 +42,6 @@ window.setTimeout(function()
 	});
 }, 5000);
 
-/* 
-$('a.external').on('click', function(e) {
-        e.preventDefault();
-        var url = $(this).attr('href');
-        $(".modal-body").html('<iframe width="100%" height="100%" frameborder="0" scrolling="yes" allowtransparency="true" src="'+url+'"></iframe>');
- 
-      });*/
-
 $('#myModal').on('show.bs.modal', function() { 
   $(this).find('.modal-dialog').css({
                   width:'40%x', //choose your width
@@ -67,3 +59,4 @@ $('#myModal').on('show.bs.modal', function() {
     'padding':'0'
   });
 });
+
