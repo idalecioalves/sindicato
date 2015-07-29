@@ -1,5 +1,5 @@
 <?php
-$app->group('/comunidade', function () use ($app) {
+$app->group('/comunidade', $authenticate($app),  function () use ($app) {
 
 //lista todas as comunidades
 	$app->get('/lista', function () use ($app) {

@@ -1,6 +1,6 @@
 <?php
 
-$app->group('/usuario', function () use ($app)
+$app->group('/usuario',  $authenticate($app),  function () use ($app)
 {	
 	$app->get('/lista', function () use ($app)
 	{	

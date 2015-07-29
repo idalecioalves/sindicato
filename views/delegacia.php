@@ -14,10 +14,11 @@
                 <span class="pull-right">
                   <!-- Tabs -->
                   <ul class="nav panel-tabs">
-                    <li><a href="#tab1" data-toggle="tab">Delegacia</a></li>
-                    <li><a href="#tab2" data-toggle="tab">Delegado</a></li>
-                    <li><a href="#tab3" data-toggle="tab">Locador</a></li>
                     <li><a href="#tab4" data-toggle="tab">Observações</a></li>
+                    <li><a href="#tab3" data-toggle="tab">Locador</a></li>
+                    <li><a href="#tab2" data-toggle="tab">Delegado</a></li>
+                    <li><a href="#tab1" data-toggle="tab">Delegacia</a></li>
+                    
                   </ul>
                 </span>
               </div>

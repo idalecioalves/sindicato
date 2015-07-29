@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?php echo baseUrl().'/css/bootstrap.css';?>">
 	<link rel="stylesheet" href="<?php echo baseUrl().'/css/cadado.css';?>" />
 	<link rel="stylesheet" href="<?php echo baseUrl().'/css/style.css';?>" />	
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/nakupanda/bootstrap3-dialog/master/dist/css/bootstrap-dialog.min.css">
 </head>
 <body>
 
