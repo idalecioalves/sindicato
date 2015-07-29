@@ -54,7 +54,7 @@ $app->group('/usuario', function () use ($app)
 		$flag = $app->banco->usuario()->where('email',$email)->count();
 		if($flag>=1)
 		{
-			$errors['error_email'] = "Este emial já enconta-se cadastrato";			
+			$errors['error_email'] = "Este email já enconta-se cadastrato";			
 		}
 
 		if (count($errors) > 0)
@@ -122,11 +122,13 @@ $app->post('/edita/:id', function ($id) use ($app)
 		$errors['password_confirm'] = "As senhas não são iguais!.";						
 	}
 
-	// $flag = $app->banco->usuario()->where('email',$email)->count();
-	// if($flag>=1)
-	// {
-	// 	$errors['error_email'] = "Este emial já enconta-se cadastrato";			
-	// }
+	$flag = $app->banco->usuario()->where('email',$email)->count();	
+	$soft = $app->banco->usuario()->where('id',$id)->fetch();		
+
+	if($flag>=1 &&  $soft['email'] <> $email )
+	{		
+		$errors['error_email'] = "Este email já enconta-se cadastrato";		
+	}
 
 	if (count($errors) > 0)
 	{
@@ -137,7 +139,6 @@ $app->post('/edita/:id', function ($id) use ($app)
 		$app->redirect(baseUrl().'/usuario/lista');
 	}
 
-
 	$data = array(
 		'name'=> $nome, 
 		'email'=>$email,
@@ -145,7 +146,6 @@ $app->post('/edita/:id', function ($id) use ($app)
 		'type_id'=>$nivel,
 		);
 
-	//virifica se o id ja existe
 	$usu = $app->banco->usuario()->where('id',$id)->fetch();
 	if($usu)
 	{	
