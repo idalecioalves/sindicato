@@ -16,37 +16,37 @@
 			<div id="primeira">
 				<label for="apelido" >Nome:</label>
 				<div id="campoapelido">
-					<input type="text" class="txtmaiores bradius" name="apelido" required/>
+					<input type="text" class="txtusuario bradius" name="apelido" required/>
 				</div>
 			</div>
 			<div id="primeira">
 				<label >E-mail:</label>
 				<div id="campoapelido">
-					<input type="email" class="txtmaiores bradius" name="email" value="<?php echo (isset($email_value)?$email_value:'');?>" required />
+					<input type="email" class="txtusuario bradius" name="email" value="<?php echo (isset($email_value)?$email_value:'');?>" required />
 				</div>
 			</div>
 			<div id="primeira">
 				<label>Senha:</label>
 				<div id="campoapelido">
-					<input type="password" class="txtmedios bradius" name="senha" value="" required />
+					<input type="password" class="txtusermedios bradius" name="senha" value="" required />
 				</div>
 			</div>
 			<div id="primeira">
 				<label>Repita Senha:</label>
 				<div id="campoapelido">
-					<input type="password" class="txtmedios bradius" name="repsenha" value="" required />
+					<input type="password" class="txtusermedios bradius" name="repsenha" value="" required />
 				</div>
 			</div>
 			<div id="primeira">
 				<label>Nível:</label></br>
-				<select id="" name="nivel" class="txtmedios  bradius">
+				<select id="" name="nivel" class="txtusermedios  bradius">
 					<?php foreach ($nivel as $key => $value): ?>
 					<?php echo '<option value="'.$key.'"'.selected($key,(isset($nivel_value)?$nivel_value:'-1')).'>'.$value.'</option>'; ?>
 				<?php endforeach; ?>
 			</select>
 		</div>
 		<div id="primeira">
-			<input type="submit" class="txtpequenos bradius" name="cadastrar" value="Cadastrar">
+			<input type="submit" class="txtcad bradius" name="cadastrar" value="Cadastrar">
 		</div>
 	</form>
 </div>
