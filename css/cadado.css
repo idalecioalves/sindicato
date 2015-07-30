@@ -80,12 +80,12 @@ header#cabecalho{
 
 }
 #primeira{
-	background-color: #f1f1f1;
 	margin-top: 10px;
 	line-height: 0;
 	float: left;
 	position: relative;
 	margin-right: 10px;
+	text-align: left;
 }
 #civgeral{
 	float: left;
@@ -223,6 +223,7 @@ header#cabecalho{
 	border: thin solid #f1f1f1;
 	margin-top: 10px;
 	text-align: center;
+	float: left;
 }
 .txtmedios{
 	border:none;
@@ -253,12 +254,12 @@ header#cabecalho{
 	transition: all 0.5s linear;
 }
 .cadastrar:hover{
-    	background: #09f;
-		box-shadow: 0 2px 16px #09f;
-    }
+	background: #09f;
+	box-shadow: 0 2px 16px #09f;
+}
 .cad:hover{
-		background: #09f;
-		box-shadow: 0 2px 16px #09f;
+	background: #09f;
+	box-shadow: 0 2px 16px #09f;
 }
 .bradius{
 	border-radius: 10px;
@@ -301,25 +302,25 @@ header#cabecalho{
 }
 /*Delegacia*/
 .window{
-  width: 850px;
-  height: 480px;
-  margin-top: -50px;
-  left: 40%;
-  margin-left: -150px;
-  display:none;
-  position:absolute;
-  background:#FFF;
-  z-index:9900;
-  padding:10px;
-  border-radius:10px;
+	width: 850px;
+	height: 480px;
+	margin-top: -50px;
+	left: 40%;
+	margin-left: -150px;
+	display:none;
+	position:absolute;
+	background:#FFF;
+	z-index:9900;
+	padding:10px;
+	border-radius:10px;
 }
 #mascara{
-  position:absolute;
-  left:0;
-  top:0;
-  z-index:9000;
-  background-color:#000;
-  display:none;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:9000;
+	background-color:#000;
+	display:none;
 }
 
 /*Login*/
@@ -372,15 +373,14 @@ header#cabecalho{
 }
 /*Cadastro de usuários*/
 #cadastro{
+	background-color: #f1f1f1;
 	top:50%;
-	margin-top: -230px;
+	margin-top: -220px;
 	left:50%;
-	margin-left: -150px;
-	text-align: center;
-	width: 300px;
+	margin-left: -575px;
+	width: 1150px;
 	position: absolute;
-	border: 3px solid black;
-	padding: 10px;
+	padding:0, 0, 0 10px;
 }
 
 

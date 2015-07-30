@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div id="geral">	
+<div id="geral">
 	<img src="img/logo.png" id="imagemlogo" class="bradius">
 	<header id="cabecalho">
 		<img src="img/topo.png" id="imgtxt">
@@ -115,11 +115,11 @@
 					<label id="civilabel" for="estadocivic" >Estado Civil:</label>
 				</div>
 				<div id="esivilcadados" class="bradius" />
-				<input type="radio" name="opcao" value="solteiro">Solteiro
-				<input type="radio" name="opcao" value="casado">Casado
-				<input type="radio" name="opcao" value="Amasiado">Amasiado
-				<input type="radio" name="opcao" value="outros">Outros
-				<input type="radio" name="opcao" value="viuvo">Viúvo
+				<input type="radio" name="opcao3" checked value="solteiro">Solteiro
+				<input type="radio" name="opcao3" value="casado">Casado
+				<input type="radio" name="opcao3" value="Amasiado">Amasiado
+				<input type="radio" name="opcao3" value="outros">Outros
+				<input type="radio" name="opcao3" value="viuvo">Viúvo
 			</div>
 		</div>
 		<div id="primeira">
@@ -277,12 +277,12 @@
 	</div>
 	<div id="graucadados" class="bradius">
 		<label id="titulos" for="escola">ESCOLARIDADE:</label>
-		<input type="radio" name="opcao" value="analfabeto">Analfabeto
-		<input type="radio" name="opcao" value="alfabetizado">Alfabetizado
-		<input type="radio" name="opcao" value="pgmenor">1º Grau Menor
-		<input type="radio" name="opcao" value="pgmaior">1º Grau Maior
-		<input type="radio" name="opcao" value="sgcompleto">2º Grau Completo
-		<input type="radio" name="opcao" value="sgincompleto">2º Grau Incompleto
+		<input type="radio" name="opcao2" checked value="analfabeto">Analfabeto
+		<input type="radio" name="opcao2" value="alfabetizado">Alfabetizado
+		<input type="radio" name="opcao2" value="pgmenor">1º Grau Menor
+		<input type="radio" name="opcao2" value="pgmaior">1º Grau Maior
+		<input type="radio" name="opcao2" value="sgcompleto">2º Grau Completo
+		<input type="radio" name="opcao2" value="sgincompleto">2º Grau Incompleto
 	</div>
 	<div id="profissaocadados" class="bradius">
 		<div id="titulos" class="bradius">
@@ -293,7 +293,7 @@
 			<input type="text" class=" txtprof bradius" name="profissão" required />
 		</div>
 		<div id="pro">
-			<input type="radio" name="opcao1" class="" value="analfabeto">Produtor</br></br>
+			<input type="radio" name="opcao1" class="" value="analfabeto" checked>Produtor</br></br>
 			<input type="radio" name="opcao1" class="" value="alfabetizado">Comodatário
 		</div>
 		<div id="pro">
